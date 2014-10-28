@@ -5,19 +5,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<meta http-equiv="refresh" content="1;URL=record.jsp">
 <html>
-  <head>
-    <base href="<%=basePath%>">
-    
-	 <style type="text/css">    
-	 body{    
-      background-image: url(1363931951521.jpg);    
-      background-repeat: repeat-x;    
-	 }    
- 	</style>
- 	
-  </head>
-  
+ <head> 
+ <title></title> 
+ </head>  
+ <script language="javascript" type="text/javascript">     
+         
+ 	alert("照片上传成功！");     
+
+ </script>  
   <body>
   <%
  	 MultipartRequest theMultipartRequest = new MultipartRequest(request,"C:\\record\\",10*1024*1024);
@@ -31,7 +28,5 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  	 	File theFile = theMultipartRequest.getFile(fieldName);
  	 }  
    %>
-    <br><font color = red size = 7>恭喜您照片上传成功！</br>
-    <p><a href="Main.jsp"><font color = red size = 4>返回主页</a></p>
   </body>
 </html>

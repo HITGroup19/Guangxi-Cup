@@ -5,18 +5,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<meta http-equiv="refresh" content="1;URL=record.jsp">
 <html>
-  <head>
-    <base href="<%=basePath%>">
-    
-	 <style type="text/css">    
-	 body{    
-      background-image: url(1363931878278.jpg);    
-      background-repeat: repeat-x;    
-	 }    
- 	</style>
+ <head> 
+ <title></title> 
+ </head>  
+ <script language="javascript" type="text/javascript">     
+         
+ 	alert("音频资料上传成功！");     
 
-  </head>
+ </script>  
   
   <body>
   <%
@@ -30,9 +28,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  	 	String contentType = theMultipartRequest.getContentType(fieldName);
  	 	File theFile = theMultipartRequest.getFile(fieldName);
 	}
- 	 out.println("恭喜您音频信息上传成功！");
    %>
-    <br><font color = red size = 7>恭喜您音频信息上传成功！</br>
-    <p><a href="Main.jsp"><font color = red size = 4>返回主页</a></p>
   </body>
 </html>
