@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <filter>
+    <filter-name>SetCharacterEncodingFilter</filter-name>
+    <filter-class>action.SetCharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>addactor</servlet-name>
+    <servlet-class>action.addactor</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Showoutsider</servlet-name>
+    <servlet-class>action.Showoutsider</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Showinsider</servlet-name>
+    <servlet-class>action.Showinsider</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Addrecord</servlet-name>
+    <servlet-class>action.Addrecord</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Actionbase</servlet-name>
+    <servlet-class>action.Actionbase</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>addactor</servlet-name>
+    <url-pattern>/addactor</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Showoutsider</servlet-name>
+    <url-pattern>/Showoutsider</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Showinsider</servlet-name>
+    <url-pattern>/Showinsider</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Addrecord</servlet-name>
+    <url-pattern>/Addrecord</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Actionbase</servlet-name>
+    <url-pattern>/servlet/Actionbase</url-pattern>
+  </servlet-mapping>	
+    <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  </web-app>
