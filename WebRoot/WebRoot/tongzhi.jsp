@@ -3,41 +3,45 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="<%=basePath%>">
-    
-	 <style type="text/css">    
+    	 <style type="text/css">    
 	 body{    
-      background-image: url(201192011454256.jpg);    
-      background-repeat: repeat-x;    
+      background-image: url(basketball-hall-of-fame-019jpg-f98854aae898a2b1.jpg);    
+      background-repeat: no;    
 	 }    
  	</style>
+ <!--
+ <link rel="stylesheet" type="text/css" href="styles.css">
+ -->
 
   </head>
   
-  <body>
-    <br><font color = orange size = 5>本次光熙杯篮球赛有HIT联合xx公司联合赞助，冠军大奖由xx企业赞助的百万现金 </br>
-    <br><font color = green size = 5>希望各队球员本着友谊第一，比赛第二精神</br>
-    <br><font color = red size = 7>加油!!!</br>
     <body>
   <%!int k=4 ;%>
 
   <form>
-  <table align='left' width="650" height='430' cellspacing="0" cellpadding="0" >
+  <table align='center' width="750" height='480' cellspacing="0" cellpadding="0" >
     <tr align='center'>
      <td>
       <div id='picName' style='display:none';>       
       </div>     
     </td>
    </tr>  
-   <tr align='left' >
-     <td height='430'>
-      <img src="" id="turn" width="650" height='430' border='1' style="filter:revealTrans(duration=1); margin：0em 0em 0em 0em;">   
+   <tr align='center' >
+     <td height='480'>
+      <img src="" id="turn" width="750" height='480' border='1' style="filter:revealTrans(duration=1); margin：0em 0em 0em 0em;">   
     </td>
-   </tr>      
+   </tr>  
+   <tr align='center'>
+     <td>
+     <img src='9.png' onclick='lastM();' width='40' height='40' border='1' alt="上一张"> 
+      <img src='11.png' id='psId' onclick='stopM();' width='40' height='40' border='1' alt="暂停">       
+      <img src='1.png' onclick='nextM();'width='40' height='40' border='1' alt="下一张">   
+    </td>
+   </tr>        
   </table>
   </form>
 <script type="text/javascript"> 
@@ -66,6 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  var time=2000;//轮换时间间隔,单位毫秒
  var pic_obj=document.getElementById("turn") ;//捕获轮换图片对象
  var name_obj=document.getElementById("picName") ;//捕获轮换名对象
+ var ps_obj=document.getElementById("psId");
  //初始化
   name_obj.innerText=a_name[current-1];
   pic_obj.src=a_url[current-1];
@@ -88,8 +93,63 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   setTimeout("change()",time);//无限循环
    } 
  }
+  function stopM()
+ {  
+  if(tag)
+  {//想要停止播放
+  tag=false;
+  //按钮切换到播放按钮
+  ps_obj.src='12.png';
+  ps_obj.width='40';
+  ps_obj.height='40';
+  ps_obj.alt='播放';
+  ps_obj.border='1';
+  }
+  else
+  {//想要开始播放
+  tag=true;  
+  //按钮切换到停止按钮
+  ps_obj.src='11.png';
+  ps_obj.width='40';
+  ps_obj.height='40';
+  ps_obj.alt='停止';
+  ps_obj.border='1';
+  ps_obj.onclick=stopM;
+  
+  setTimeout("change()",time);
+  }
+ }
+  
  
+ //上一张
+ function lastM()
+ {
+  if(current!=1)
+  {
+   current-=1;   
+  }
+  else
+  {
+   current=total;   
+  }
+  name_obj.innerText=a_name[current-1];
+  pic_obj.src=a_url[current-1];
+ }
+ //下一张
+ function nextM()
+ {
+  if(current!=total)
+  {
+   current+=1;   
+  }
+  else
+  {
+   current=1;   
+  }
+  name_obj.innerText=a_name[current-1];
+  pic_obj.src=a_url[current-1];
+ }
 </script>
-	 <p><font color = red size = 2><a href="Main.jsp">返回主页</a></p>
+<p><a href="test1.jsp">返回主页</a></p>
   </body>
 </html>
