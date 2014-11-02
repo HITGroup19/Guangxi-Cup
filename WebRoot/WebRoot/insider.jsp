@@ -7,14 +7,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-	 <style type="text/css">    
-	 body{    
-      background-image: url(t011aacc8de19e7f5eb.jpg);    
-      background-repeat: repeat-x;    
-	 }    
- 	</style>
+     <link href="file/css/test5.css" rel='stylesheet' type='text/css' />
   </head>
   <body>
+   <div id="Nav">队伍得分情况</div>
+   <div id="Banner">
     <table width="706" border="1" align="left">
    <tr>
      <td width="180" colspan="1" align="center" >队伍名</td>
@@ -39,6 +36,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	} 
     	%>
     </table>
- 	<p><a href="Main.jsp">返回主页</a></p>
+    </div>
+    <div id="Content"></div>
+     <div id="Footer">
+ 	<p><a href="result.jsp">返回上一层</a></p>
+ 	</div>
   </body>
 </html>
