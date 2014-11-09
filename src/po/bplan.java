@@ -1,25 +1,22 @@
 package po;
 
-public class baoming {
+public class bplan {
 	private String one;
 	private String two;
 	private String three;
 	private String four;
-	private String five;
-	public baoming(){
+	public bplan(){
 		one = null;
 		two = null;
 		three = null;
 		four = null;
-		five = null;
 	}
 	
-	public baoming(String one,String two,String three,String four,String five){
+	public bplan(String one,String two,String three,String four){
 		this.one = one;
 		this.two= two;
 		this.three = three;
 		this.four= four;
-		this.five = five;
 	}
 	public void setOne(String one) {
 		this.one = one;
@@ -50,13 +47,6 @@ public class baoming {
 
 	public String getFour() {
 		return four;
-	}
-	public void setFive(String five) {
-		this.five = five;
-	}
-
-	public String getFive() {
-		return five;
 	}
 
 }

@@ -1,41 +1,62 @@
 package po;
 
 public class record {
-	private String team;
-	private String time;
-	private String news;
+	private String one;
+	private String two;
+	private String three;
+	private String four;
+	private String five;
 	public record(){
-		team = null;
-		time = null;
-		news = null;
+		one = null;
+		two = null;
+		three = null;
+		four = null;
+		five = null;
 	}
 	
-	public record(String team,String time,String news){
-		this.team = team;
-		this.time= time;
-		this.news = news;
+	public record(String one,String two,String three,String four,String five){
+		this.one = one;
+		this.two= two;
+		this.three = three;
+		this.four= four;
+		this.five = five;
 	}
-	public void setTeam(String team) {
-		this.team = team;
-	}
-
-	public String getTeam() {
-		return team;
+	public void setOne(String one) {
+		this.one = one;
 	}
 
-	public void setTime(String time) {
-		this.time = time;
+	public  String getOne() {
+		return one;
 	}
 
-	public String getTime() {
-		return time;
-	}
-	public void setNews(String news) {
-		this.news = news;
+	public void setTwo(String two) {
+		this.two = two;
 	}
 
-	public String getNews() {
-		return news;
+	public String getTwo() {
+		return two;
+	}
+	public void setThree(String three) {
+		this.three = three;
+	}
+
+	public String getThree() {
+		return three;
+	}
+
+	public void setFour(String four) {
+		this.four = four;
+	}
+
+	public String getFour() {
+		return four;
+	}
+	public void setFive(String five) {
+		this.five = five;
+	}
+
+	public String getFive() {
+		return five;
 	}
 
 }

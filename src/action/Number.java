@@ -1,15 +1,15 @@
 package action;
 
 import java.io.IOException;
-
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import po.baoming;
-public class addactor extends HttpServlet {
+import po.number;
+public class Number extends HttpServlet {
 
 	/**
 	 * 
@@ -30,23 +30,30 @@ public class addactor extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String url = "success.jsp";
+		String url = "error2.jsp";
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
-		baoming baoming = new baoming();
-		String one = new String(request.getParameter("one").getBytes("ISO-8859-1"),"UTF-8");
-		String two = new String(request.getParameter("two").getBytes("ISO-8859-1"),"UTF-8");
-		String three = new String(request.getParameter("three").getBytes("ISO-8859-1"),"UTF-8");
-		String four = new String(request.getParameter("four").getBytes("ISO-8859-1"),"UTF-8");
-		String five = new String(request.getParameter("five").getBytes("ISO-8859-1"),"UTF-8");
-		baoming.setOne(one);
-		baoming.setTwo(two);
-		baoming.setThree(three);
-		baoming.setFour(four);
-		baoming.setFive(five);
-		if(Actionbase.addInfo(baoming)){
-			request.setAttribute("message", "队伍名"+baoming.getOne()+"的队伍报名成功");
-		}
+		number number0 = new number();
+		String number= new String(request.getParameter("number").getBytes("ISO-8859-1"),"UTF-8");
+		number0.setNumber(number);
+	  	ArrayList<number> numberinfo = Actionbase.showAllnumber();
+	  	if(numberinfo!=null&&numberinfo.size()>0){
+	  	   	for(int i=0;i<numberinfo.size();i++){
+	  	   		number number1 =(number)numberinfo.get(i);
+	  	   		String Number = number1.getNumber();
+	  	   		if(number!= null)
+	  	   		{
+	  	   			if(number.equals(Number) == true)
+	   					{
+	   					url = "addactor.jsp";
+	   					}
+	  	   		
+	  	   		}
+	  	   		else{
+	  	   			url = "error2.jsp";
+	  	   		}
+	  	}
+	  	}
 		RequestDispatcher rd=request.getRequestDispatcher(url);
 		rd.forward(request, response);
 	}

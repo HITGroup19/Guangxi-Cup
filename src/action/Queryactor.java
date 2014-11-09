@@ -9,9 +9,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import po.outsider;
+import po.baoming;
 
-public class Showoutsider extends HttpServlet {
+public class Queryactor extends HttpServlet {
 
 	/**
 	 * Constructor of the object.
@@ -58,19 +58,19 @@ public class Showoutsider extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String url="outsider.jsp";
+		String url="queryactor.jsp";
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
-		outsider outsider = new outsider();
-		String name = new String(request.getParameter("name").getBytes("ISO-8859-1"),"UTF-8");
-		String rank = new String(request.getParameter("rank").getBytes("ISO-8859-1"),"UTF-8");
-		if(name!=null){
-			outsider = Actionbase.QueryOut(name);
-			if(outsider.getName()!=null){
-				request.setAttribute("name", outsider.getName());
-				request.setAttribute("win", outsider.getWin());
-				request.setAttribute("lose", outsider.getLose());
-				request.setAttribute("lose", outsider.getRank());
+		baoming baoming = new baoming();
+		String three = new String(request.getParameter("three").getBytes("ISO-8859-1"),"UTF-8");
+		if(three!=null){
+			baoming = Actionbase.Query0(three);
+			if(baoming.getThree()!=null){
+				request.setAttribute("one", baoming.getOne());
+				request.setAttribute("two", baoming.getTwo());
+				request.setAttribute("three", baoming.getThree());
+				request.setAttribute("four", baoming.getFour());
+				request.setAttribute("five", baoming.getFive());
 			}
 		}
 		

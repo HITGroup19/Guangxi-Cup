@@ -1,6 +1,7 @@
 package action;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import po.insider;
+import action.Actionbase;
 
 public class Showinsider extends HttpServlet {
 
@@ -61,11 +64,10 @@ public class Showinsider extends HttpServlet {
 
 		String url = "insider.jsp";
 		response.setContentType("text/html");
-		response.setCharacterEncoding("UTF-8");
 		List list=new ArrayList();
 		String name = new String(request.getParameter("name").getBytes("ISO-8859-1"),"UTF-8");
-		list = Actionbase.QueryIn(name);
-		request.setAttribute("list", list);
+		list=Actionbase.QueryIn(name);
+		request.setAttribute("list", list);	
 	    RequestDispatcher rd=request.getRequestDispatcher(url);
 		rd.forward(request, response);
 		return;

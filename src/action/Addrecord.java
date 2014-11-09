@@ -28,19 +28,23 @@ public class Addrecord extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String url = "success.jsp";
+		String url = "queryrecord.jsp";
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		record record = new record();
-		String team= new String(request.getParameter("team").getBytes("ISO-8859-1"),"UTF-8");
-		String time = new String(request.getParameter("time").getBytes("ISO-8859-1"),"UTF-8");
-		String news = new String(request.getParameter("news").getBytes("ISO-8859-1"),"UTF-8");
-		record.setTeam(team);
-		record.setTime(time);
-		record.setNews(news);
+		String one= new String(request.getParameter("one").getBytes("ISO-8859-1"),"UTF-8");
+		String two = new String(request.getParameter("two").getBytes("ISO-8859-1"),"UTF-8");
+		String three = new String(request.getParameter("three").getBytes("ISO-8859-1"),"UTF-8");
+		String four = new String(request.getParameter("four").getBytes("ISO-8859-1"),"UTF-8");
+		String five = new String(request.getParameter("five").getBytes("ISO-8859-1"),"UTF-8");
+		record.setOne(one);
+		record.setTwo(two);
+		record.setThree(three);
+		record.setFour(four);
+		record.setFive(five);
 		if(Actionbase.addInfo1(record)){
 
-			request.setAttribute("message", "ÔÚÊ±¼äÎª"+record.getTime()+"µÄ¼ÇÂ¼ÉÏ´«³É¹¦");
+			//request.setAttribute("message", "åœ¨æ—¶é—´ä¸º"+record.getTime()+"çš„è®°å½•ä¸Šä¼ æˆåŠŸ");
 		}
 		RequestDispatcher rd=request.getRequestDispatcher(url);
 		rd.forward(request, response);
