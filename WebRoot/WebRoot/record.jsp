@@ -7,14 +7,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>	
   <head>
     <base href="<%=basePath%>">
-	 <style type="text/css">    
-	 body{    
-      background-image: url(133242265.jpg);    
-      background-repeat: repeat-x;    
-	 }    
- 	</style>
+ <link href="file/css/test5.css" rel='stylesheet' type='text/css' />
   </head>
   <body> 
+  <div id="Nav">
+  <p>现场记录</p>
+  </div>
+  <div id="Banner">
    <form  name="form" method="post" action='Addrecord'>
         <p><span >记录队伍</span>
 <label>
@@ -37,12 +36,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        </p>
       </form>
      <form action = "upload.jsp" enctype ="multipart/form-data" name = theFile method ="post">
-		<input type="file" name="theFirstfile" size =50/><br>
+		<input type="file" name="theFirstfile" size =30/><br>
      	<input type="submit" name="submitButton" value ="照片上传"/></form>
     <form action = "uploadvideo.jsp" enctype ="multipart/form-data" name = theFile method ="post">
-		<input type="file" name="theFirstfile" size =50/><br>
+		<input type="file" name="theFirstfile" size =30/><br>
      	<input type="submit" name="submitButton" value ="音频上传"/></from>
-  <p><a href="Main.jsp">返回主页</a></p>
+    </div>
+    <div id="Content"></div>
+    <div id="Footer">
+  <p><a href="test0.jsp">返回主页</a></p>
+  </div>
   </body>
 </html>
 

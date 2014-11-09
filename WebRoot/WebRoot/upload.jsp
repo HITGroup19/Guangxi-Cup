@@ -15,6 +15,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  	alert("照片上传成功！");     
 
  </script>  
+	<style type="text/css">    
+	 body{    
+      background-image: url(images/1363931951521.jpg);    
+      background-repeat: repeat-x;    
+	 }    
+ 	</style>
   <body>
   <%
  	 MultipartRequest theMultipartRequest = new MultipartRequest(request,"C:\\record\\",10*1024*1024);

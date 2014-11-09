@@ -10,23 +10,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      <link href="file/css/test5.css" rel='stylesheet' type='text/css' />
   </head>
   <body>
-   <div id="Nav">队伍得分情况</div>
+   <div id="Nav">队员表现信息</div>
    <div id="Banner">
-    <table width="706" border="1" align="left">
+    <table width="706" border="0" align="center">
    <tr>
-     <td width="180" colspan="1" align="center" >队伍名</td>
-      <td width="180" colspan="1" align="center" >球员名</td>
-           <td width="180" colspan="1" align="center" >得分</td>
-      <td width="180" colspan="1" align="center" >抢断</td>
-           <td width="180" colspan="1" align="center" >篮板</td>
+     <th width="180" colspan="1" align="center" >队伍名</td>
+      <th width="180" colspan="1" align="center" >球员名</td>
+           <th width="180" colspan="1" align="center" >得分</td>
+      <th width="180" colspan="1" align="center" >抢断</td>
+           <th width="180" colspan="1" align="center" >篮板</td>
    </tr>
+    <tr></tr>
+   <tr></tr>
     <%
     	List list=(List)request.getAttribute("list");
     	Iterator iter=list.iterator();
     	while(iter.hasNext()){
     		insider insider=(insider)iter.next();
     		    	%>
-    	<tr>
+    	<tr align="center" bgcolor="#99bbff">
     	<td><%=insider.getName() %></td>
     	<td><%=insider.getPname() %></td>
     	<td><%=insider.getDefen()  %></td>

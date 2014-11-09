@@ -15,6 +15,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  	alert("音频资料上传成功！");     
 
  </script>  
+ 	<style type="text/css">    
+	 body{    
+      background-image: url(images/1363931878278.jpg);    
+      background-repeat: repeat-x;    
+	 }    
+ 	</style>
   
   <body>
   <%

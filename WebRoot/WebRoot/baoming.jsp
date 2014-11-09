@@ -14,8 +14,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div id="Nav">
 </div>
 <div id="Banner">
-		<td><A href = "addactor.jsp" style="text-decoration:none"><font size ="8">报名</font></A></td>
-		<td><A href = "queryactor.jsp" style="text-decoration:none"><font size ="8">报名队伍查询</font></A></td>
+     	<li><a href="check.jsp">报名</h1></li>
+        <li><a href="check3.jsp">修好已报名球员信息</h1></a></li>
+        <li><a href="dactor.jsp">删除已报名球员信息</h1></a></li>
 </div>
 <div id="Content">
     <div id="ContentL"><h1>报名须知</h1>

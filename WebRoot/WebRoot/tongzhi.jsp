@@ -6,13 +6,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+  <link href="file/css/test1.css" rel='stylesheet' type='text/css' />
     <base href="<%=basePath%>">
-    	 <style type="text/css">    
-	 body{    
-      background-image: url(basketball-hall-of-fame-019jpg-f98854aae898a2b1.jpg);    
-      background-repeat: no;    
-	 }    
- 	</style>
+
  <!--
  <link rel="stylesheet" type="text/css" href="styles.css">
  -->
@@ -20,13 +16,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
     <body>
+    <div id="Nav"></div>
+    <div id="Banner" align="center"><font size="6" color="">精彩瞬间</font></div>
+	<div id="Content">
+		<div id="ContentL"></div>
+		<div id="ContentC">
   <%!int k=4 ;%>
 
   <form>
   <table align='center' width="750" height='480' cellspacing="0" cellpadding="0" >
     <tr align='center'>
      <td>
-      <div id='picName' style='display:none';>       
+      <div id='picName' style='display:none'>       
       </div>     
     </td>
    </tr>  
@@ -37,9 +38,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    </tr>  
    <tr align='center'>
      <td>
-     <img src='9.png' onclick='lastM();' width='40' height='40' border='1' alt="上一张"> 
-      <img src='11.png' id='psId' onclick='stopM();' width='40' height='40' border='1' alt="暂停">       
-      <img src='1.png' onclick='nextM();'width='40' height='40' border='1' alt="下一张">   
+     <img src='images/9.png' onclick='lastM();' width='40' height='40' border='1' alt="上一张"> 
+      <img src='images/11.png' id='psId' onclick='stopM();' width='40' height='40' border='1' alt="暂停">       
+      <img src='images/1.png' onclick='nextM();'width='40' height='40' border='1' alt="下一张">   
     </td>
    </tr>        
   </table>
@@ -48,10 +49,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  var a_url=new Array(4);
  var a_name=new Array(4);
  <%ArrayList list=new ArrayList();
-  list.add("20141018171211.jpg");
-  list.add("20141018171231.jpg");
-  list.add("Q20141025161837.jpg");
-  list.add("QQ20141025161907.jpg");
+  list.add("images/20141018171211.jpg");
+  list.add("images/20141018171231.jpg");
+  list.add("images/Q20141025161837.jpg");
+  list.add("images/QQ20141025161907.jpg");
   %>
   <% //把ArrayList的信息存放到数组中--图片路径传输入口
   for(int i=0;i<k;i++)
@@ -99,7 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   {//想要停止播放
   tag=false;
   //按钮切换到播放按钮
-  ps_obj.src='12.png';
+  ps_obj.src='images/12.png';
   ps_obj.width='40';
   ps_obj.height='40';
   ps_obj.alt='播放';
@@ -109,7 +110,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   {//想要开始播放
   tag=true;  
   //按钮切换到停止按钮
-  ps_obj.src='11.png';
+  ps_obj.src='images/11.png';
   ps_obj.width='40';
   ps_obj.height='40';
   ps_obj.alt='停止';
@@ -150,6 +151,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   pic_obj.src=a_url[current-1];
  }
 </script>
-<p><a href="test1.jsp">返回主页</a></p>
+</div>
+<div id="ContentR"></div>
+</div>
   </body>
 </html>

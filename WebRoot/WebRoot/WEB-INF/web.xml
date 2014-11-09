@@ -40,9 +40,73 @@
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>Actionbase</servlet-name>
-    <servlet-class>action.Actionbase</servlet-class>
+    <servlet-name>Admin</servlet-name>
+    <servlet-class>action.Admin</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Number</servlet-name>
+    <servlet-class>action.Number</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Jifen</servlet-name>
+    <servlet-class>action.Jifen</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Queryactor</servlet-name>
+    <servlet-class>action.Queryactor</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Update</servlet-name>
+    <servlet-class>action.Update</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Aplanadd</servlet-name>
+    <servlet-class>action.Aplanadd</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Addaplan</servlet-name>
+    <servlet-class>action.Addaplan</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Daplan</servlet-name>
+    <servlet-class>action.Daplan</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Dactor</servlet-name>
+    <servlet-class>action.Dactor</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Number0</servlet-name>
+    <servlet-class>action.Number0</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,10 +130,42 @@
     <url-pattern>/Addrecord</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>Actionbase</servlet-name>
-    <url-pattern>/servlet/Actionbase</url-pattern>
+    <servlet-name>Admin</servlet-name>
+    <url-pattern>/Admin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Number</servlet-name>
+    <url-pattern>/Number</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Jifen</servlet-name>
+    <url-pattern>/Jifen</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Queryactor</servlet-name>
+    <url-pattern>/Queryactor</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Update</servlet-name>
+    <url-pattern>/Update</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Addaplan</servlet-name>
+    <url-pattern>/Addaplan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Daplan</servlet-name>
+    <url-pattern>/Daplan</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Dactor</servlet-name>
+    <url-pattern>/Dactor</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Number0</servlet-name>
+    <url-pattern>/Number0</url-pattern>
   </servlet-mapping>	
     <welcome-file-list>
-    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>test0.jsp</welcome-file>
   </welcome-file-list>
   </web-app>

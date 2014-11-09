@@ -5,7 +5,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<meta http-equiv="refresh" content="1;URL=baoming.jsp">
+<meta http-equiv="refresh" content="1;URL=test0.jsp">
 <html> <head> 
  <title></title> 
  </head>  
@@ -14,6 +14,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  	alert("报名成功");     
 
  </script>  
+ 	<style type="text/css">    
+	 body{    
+      background-image: url(images/20121011103405569.jpg);    
+      background-repeat: repeat-x;    
+	 }    
+ 	</style>
  <body></body> 
  </html> 
 
