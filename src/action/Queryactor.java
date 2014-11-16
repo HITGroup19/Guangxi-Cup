@@ -70,7 +70,6 @@ public class Queryactor extends HttpServlet {
 				request.setAttribute("two", baoming.getTwo());
 				request.setAttribute("three", baoming.getThree());
 				request.setAttribute("four", baoming.getFour());
-				request.setAttribute("five", baoming.getFive());
 			}
 		}
 		

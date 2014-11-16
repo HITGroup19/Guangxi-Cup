@@ -36,11 +36,14 @@ public class Addaplan extends HttpServlet {
 		String two = new String(request.getParameter("two").getBytes("ISO-8859-1"),"UTF-8");
 		String three = new String(request.getParameter("three").getBytes("ISO-8859-1"),"UTF-8");
 		String four = new String(request.getParameter("four").getBytes("ISO-8859-1"),"UTF-8");
+		String five = new String(request.getParameter("five").getBytes("ISO-8859-1"),"UTF-8");
 		aplan.setOne(one);
 		aplan.setTwo(two);
 		aplan.setThree(three);
 		aplan.setFour(four);
+		aplan.setFive(five);
 		if(Actionbase.addaplan(aplan)){
+			System.out.println(five);
 
 			//request.setAttribute("message", "在时间为"+record.getTime()+"的记录上传成功");
 		}

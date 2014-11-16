@@ -1,0 +1,92 @@
+body,div,a,img,p,form,h1,h2,h3,h4,h5,h6,input,textarea,ul,li,dt,dd,dl{margin:0;padding:0;}
+#Logo,#Nav,#Banner,#Content,#Footer{width:900px; margin:0 auto;}
+#Logo{
+height:60px;/*公共代码中没有定义高度，在这里定义*/
+}
+#logoLink{
+display:block;/*将链接a转化成块状元素，这样才能显示出背景*/
+width:173px;
+height:60px;
+background:url(20101111155901_1902.jpg) no-repeat;
+}
+#Nav{
+height:50px;
+text-align:center;
+background:#68acd3;
+padding: 10px 0;
+font-size:22px;
+font-family:Arial, Helvetica, sans-serif;
+color:#fff;
+line-height:30px;
+}
+#Nav ul{
+height:50px;
+list-style:none;
+background:#4682B4;
+}
+#Nav ul li{height:50px; float:left;}
+#Nav ul li a{
+display:block;/*转化成块状元素，因链接是内链元素，若想给它定义下面的属性，必须将它转化成块状元素，*/
+height:50px;
+color:#FFF;
+padding:0 10px;
+line-height:42px;
+font-size:14px;
+font-weight:bold;
+font-family:Arial;
+text-decoration:none;/*去除链接样式，默认是有下划线的，加上这句就没有任何样式，下划线也没有了*/
+float:left;/*这句一定要加，不然在IE6中会出现，这种效果*/
+}
+#Nav ul li a:hover{background:#68acd3;}
+#Banner{
+height:580px;
+background:#d3e7f2;
+}
+#Content{overflow:hidden; background:#d3e7f2;}
+#Content #ContentL,#Content #ContentC,#Content #ContentR{float:left; padding:15px;}/*为什么都要左侧浮动，如果不明白就去看第二节*/
+#Content #ContentL{width:30px; background:#d3e7f2;}
+#Content #ContentL h1{
+height:50px;
+line-height:50px;/*设置行距，目的是保证h1中的文字垂直居中*/
+font-size:18px;
+color:#054d73;
+border-bottom:1px #969696 dashed;/*设置h1的下边框为宽度1像素的虚线*/
+margin-bottom:10px;/*设置外边距，让h1和下面的内容区域p保持10像素的距离*/
+}
+#Content #ContentL p{
+font-size:12px;
+line-height:20px;
+/*text-indent:2em;这句话的目的就是为了让文章第一行缩进两个汉字，记住这句话就OK了*/
+}
+#Content #ContentC{width:760px; background:#fff;}
+#Content #ContentR{width:70px; background:#d3e7f2;}
+#Content #ContentR h1{
+height:50px;
+line-height:50px;/*设置行距，目的是保证h1中的文字垂直居中*/
+font-size:16px;
+color:#900;
+border-bottom:1px #969696 dashed;/*设置h1的下边框为宽度1像素的虚线*/
+margin-bottom:10px;/*设置外边距，让h1和下面的内容区域p保持10像素的距离*/
+}
+#Content #ContentR strong{
+display:block;/*只有把strong标签，转化成块状元素，margin-bottom:5px;才会起作用，才能使<strong>与下面的元素维持一定距离*/
+font-size:14px;
+color:#333;
+margin-bottom:5px;
+}
+#Content #ContentR table{
+font-size:12px;
+color:#900;
+}
+#Content #ContentR span{
+font-size:12px;
+}
+#Footer{
+text-align:left;
+background:#68acd3;
+padding: 10px 0;
+font-size:16px;
+font-family:Arial, Helvetica, sans-serif;
+color:#fff;
+line-height:15px;
+}

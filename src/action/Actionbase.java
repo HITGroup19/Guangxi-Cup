@@ -36,6 +36,9 @@ public class Actionbase {
 				record.setThree(rs.getString("three"));
 				record.setFour(rs.getString("four"));
 				record.setFive(rs.getString("five"));
+				record.setSix(rs.getString("six"));
+				record.setSeven(rs.getString("seven"));
+				record.setEight(rs.getString("eight"));
 				recordinfo.add(record);
 			}
 		}catch(SQLException e){
@@ -48,6 +51,32 @@ public class Actionbase {
 		DBConnection.Close(con, stmt);
 		return recordinfo;
 	}
+	
+	public static ArrayList<result> showAllInfo1(){
+		
+		ArrayList<result> resultinfo = new ArrayList<result>();
+		try{
+			con=DBConnection.getConnection();
+			stmt=con.prepareStatement("select * from result order by two desc");//由大到下； asc 由小到大 
+			rs=stmt.executeQuery();
+			while(rs.next()){
+				result result = new result();
+				result.setOne(rs.getString("one"));
+				result.setTwo(rs.getString("two"));
+				result.setThree(rs.getString("three"));
+				resultinfo.add(result);
+			}
+		}catch(SQLException e){
+			resultinfo=null;
+		}if(rs!=null){
+			try{
+    			rs.close();
+    			}catch(SQLException e){}
+		}
+		DBConnection.Close(con, stmt);
+		return resultinfo;
+	}
+	
 	public static ArrayList<aplan> showAllInfoa(){
 		
 		ArrayList<aplan> aplaninfo = new ArrayList<aplan>();
@@ -61,6 +90,7 @@ public class Actionbase {
 				aplan.setTwo(rs.getString("two"));
 				aplan.setThree(rs.getString("three"));
 				aplan.setFour(rs.getString("four"));
+				aplan.setFive(rs.getString("five"));
 				aplaninfo.add(aplan);
 			}
 		}catch(SQLException e){
@@ -73,12 +103,87 @@ public class Actionbase {
 		DBConnection.Close(con, stmt);
 		return aplaninfo;
 	}
-public static ArrayList<baoming> showAllInfo2(String three){
+	public static ArrayList<bplan> showAllInfob(){
+		
+		ArrayList<bplan> bplaninfo = new ArrayList<bplan>();
+		try{
+			con=DBConnection.getConnection();
+			stmt=con.prepareStatement("select * from bplan ");
+			rs=stmt.executeQuery();
+			while(rs.next()){
+				bplan bplan = new bplan();
+				bplan.setOne(rs.getString("one"));
+				bplan.setTwo(rs.getString("two"));
+				bplan.setThree(rs.getString("three"));
+				bplan.setFour(rs.getString("four"));
+				bplaninfo.add(bplan);
+			}
+		}catch(SQLException e){
+			bplaninfo=null;
+		}if(rs!=null){
+			try{
+    			rs.close();
+    			}catch(SQLException e){}
+		}
+		DBConnection.Close(con, stmt);
+		return bplaninfo;
+	}
+	public static ArrayList<cplan> showAllInfoc(){
+		
+		ArrayList<cplan> cplaninfo = new ArrayList<cplan>();
+		try{
+			con=DBConnection.getConnection();
+			stmt=con.prepareStatement("select * from bplan ");
+			rs=stmt.executeQuery();
+			while(rs.next()){
+				cplan cplan = new cplan();
+				cplan.setOne(rs.getString("one"));
+				cplan.setTwo(rs.getString("two"));
+				cplan.setThree(rs.getString("three"));
+				cplan.setFour(rs.getString("four"));
+				cplaninfo.add(cplan);
+			}
+		}catch(SQLException e){
+			cplaninfo=null;
+		}if(rs!=null){
+			try{
+    			rs.close();
+    			}catch(SQLException e){}
+		}
+		DBConnection.Close(con, stmt);
+		return cplaninfo;
+	}
+	public static ArrayList<dplan> showAllInfod(){
+		
+		ArrayList<dplan> dplaninfo = new ArrayList<dplan>();
+		try{
+			con=DBConnection.getConnection();
+			stmt=con.prepareStatement("select * from dplan ");
+			rs=stmt.executeQuery();
+			while(rs.next()){
+				dplan dplan = new dplan();
+				dplan.setOne(rs.getString("one"));
+				dplan.setTwo(rs.getString("two"));
+				dplan.setThree(rs.getString("three"));
+				dplan.setFour(rs.getString("four"));
+				dplaninfo.add(dplan);
+			}
+		}catch(SQLException e){
+			dplaninfo=null;
+		}if(rs!=null){
+			try{
+    			rs.close();
+    			}catch(SQLException e){}
+		}
+		DBConnection.Close(con, stmt);
+		return dplaninfo;
+	}
+public static ArrayList<baoming> showAllInfo2(){
 	
 	ArrayList<baoming> bminfo = new ArrayList<baoming>();
 	try{
 		con=DBConnection.getConnection();
-		stmt=con.prepareStatement("select * from baoming where three = '"+three+"'");
+		stmt=con.prepareStatement("select * from baoming order by four asc");
 		rs=stmt.executeQuery();
 		while(rs.next()){
 			baoming baoming = new baoming();
@@ -86,7 +191,6 @@ public static ArrayList<baoming> showAllInfo2(String three){
 			baoming.setTwo(rs.getString("two"));
 			baoming.setThree(rs.getString("three"));
 			baoming.setFour(rs.getString("four"));
-			baoming.setFive(rs.getString("five"));
 			bminfo.add(baoming);
 		}
 	}catch(SQLException e){
@@ -100,16 +204,67 @@ public static ArrayList<baoming> showAllInfo2(String three){
 	return bminfo;
 }
 
+public static ArrayList<baoming_m> showAllInfo2_m(){
+	
+	ArrayList<baoming_m> bm_minfo = new ArrayList<baoming_m>();
+	try{
+		con=DBConnection.getConnection();
+		stmt=con.prepareStatement("select * from baoming_m order by one asc");
+		rs=stmt.executeQuery();
+		while(rs.next()){
+			baoming_m baoming_m = new baoming_m();
+			baoming_m.setOne(rs.getString("one"));
+			baoming_m.setTwo(rs.getString("two"));
+			baoming_m.setThree(rs.getString("three"));
+			baoming_m.setFour(rs.getString("four"));
+			bm_minfo.add(baoming_m);
+		}
+	}catch(SQLException e){
+		bm_minfo=null;
+	}if(rs!=null){
+		try{
+			rs.close();
+			}catch(SQLException e){}
+	}
+	DBConnection.Close(con, stmt);
+	return bm_minfo;
+}
+
+public static ArrayList<baoming_w> showAllInfo2_w(){
+	
+	ArrayList<baoming_w> bm_winfo = new ArrayList<baoming_w>();
+	try{
+		con=DBConnection.getConnection();
+		stmt=con.prepareStatement("select * from baoming_w order by one asc");
+		rs=stmt.executeQuery();
+		while(rs.next()){
+			baoming_w baoming_w = new baoming_w();
+			baoming_w.setOne(rs.getString("one"));
+			baoming_w.setTwo(rs.getString("two"));
+			baoming_w.setThree(rs.getString("three"));
+			baoming_w.setFour(rs.getString("four"));
+			bm_winfo.add(baoming_w);
+		}
+	}catch(SQLException e){
+		bm_winfo=null;
+	}if(rs!=null){
+		try{
+			rs.close();
+			}catch(SQLException e){}
+	}
+	DBConnection.Close(con, stmt);
+	return bm_winfo;
+}
+
 public static boolean addInfo(baoming baoming){	
 	    boolean flag=false;
 	    try{
 	    	con=DBConnection.getConnection();
-			stmt=con.prepareStatement("insert into baoming "+"values(?,?,?,?,?)");
+			stmt=con.prepareStatement("insert into baoming "+"values(?,?,?,?)");
 			stmt.setString(1,baoming.getOne());
 			stmt.setString(2,baoming.getTwo());
 			stmt.setString(3,baoming.getThree());
 			stmt.setString(4,baoming.getFour());
-			stmt.setString(5,baoming.getFive());
             if(stmt.executeUpdate()==1)flag=true;
 		}catch(SQLException e){
 			System.out.println(e.getMessage());
@@ -118,16 +273,53 @@ public static boolean addInfo(baoming baoming){
 		return flag;
     }
 
+public static boolean addInfo_w(baoming_w baoming_w){	
+    boolean flag=false;
+    try{
+    	con=DBConnection.getConnection();
+		stmt=con.prepareStatement("insert into baoming_w "+"values(?,?,?,?)");
+		stmt.setString(1,baoming_w.getOne());
+		stmt.setString(2,baoming_w.getTwo());
+		stmt.setString(3,baoming_w.getThree());
+		stmt.setString(4,baoming_w.getFour());
+        if(stmt.executeUpdate()==1)flag=true;
+	}catch(SQLException e){
+		System.out.println(e.getMessage());
+	}
+	DBConnection.Close(con, stmt);
+	return flag;
+}
+
+public static boolean addInfo_m(baoming_m baoming_m){	
+    boolean flag=false;
+    try{
+    	con=DBConnection.getConnection();
+		stmt=con.prepareStatement("insert into baoming_m "+"values(?,?,?,?)");
+		stmt.setString(1,baoming_m.getOne());
+		stmt.setString(2,baoming_m.getTwo());
+		stmt.setString(3,baoming_m.getThree());
+		stmt.setString(4,baoming_m.getFour());
+        if(stmt.executeUpdate()==1)flag=true;
+	}catch(SQLException e){
+		System.out.println(e.getMessage());
+	}
+	DBConnection.Close(con, stmt);
+	return flag;
+}
+
 public static boolean addInfo1(record record){	
     boolean flag=false;
     try{
     	con=DBConnection.getConnection();
-		stmt=con.prepareStatement("insert into record "+"values(?,?,?,?,?)");
+		stmt=con.prepareStatement("insert into record "+"values(?,?,?,?,?,?,?,?)");
 		stmt.setString(1,record.getOne());
 		stmt.setString(2,record.getTwo());
 		stmt.setString(3,record.getThree());
 		stmt.setString(4,record.getFour());
 		stmt.setString(5,record.getFive());
+		stmt.setString(6,record.getSix());
+		stmt.setString(7,record.getSeven());
+		stmt.setString(8,record.getEight());
         if(stmt.executeUpdate()==1)flag=true;
 	}catch(SQLException e){
 		System.out.println(e.getMessage());
@@ -135,15 +327,17 @@ public static boolean addInfo1(record record){
 	DBConnection.Close(con, stmt);
 	return flag;
 }	
+
 public static boolean addaplan(aplan aplan){	
     boolean flag=false;
     try{
     	con=DBConnection.getConnection();
-		stmt=con.prepareStatement("insert into aplan "+"values(?,?,?,?)");
+		stmt=con.prepareStatement("insert into aplan "+"values(?,?,?,?,?)");
 		stmt.setString(1,aplan.getOne());
 		stmt.setString(2,aplan.getTwo());
 		stmt.setString(3,aplan.getThree());
 		stmt.setString(4,aplan.getFour());
+		stmt.setString(5,aplan.getFive());
         if(stmt.executeUpdate()==1)flag=true;
 	}catch(SQLException e){
 		System.out.println(e.getMessage());
@@ -163,7 +357,7 @@ public static boolean deleteaplan(String one){
 	DBConnection.Close(con, stmt);
 	return flag;
 }
-public static boolean addbpaln(bplan bplan){	
+/*public static boolean addbpaln(bplan bplan){	
     boolean flag=false;
     try{
     	con=DBConnection.getConnection();
@@ -247,7 +441,12 @@ public static boolean deletedplan(String one){
 	DBConnection.Close(con, stmt);
 	return flag;
 }	
-	public static baoming Query0(String three){
+
+*/
+
+
+
+public static baoming Query0(String three){
 		baoming baoming = new baoming();
 	    ResultSet rs=null;
 	    try{
@@ -259,7 +458,6 @@ public static boolean deletedplan(String one){
 				baoming.setTwo(rs.getString("two"));
 				baoming.setThree(rs.getString("three"));
 				baoming.setFour(rs.getString("four"));
-				baoming.setFive(rs.getString("five"));
 			}
 		}catch(SQLException e){
 			baoming=null;
@@ -272,32 +470,7 @@ public static boolean deletedplan(String one){
 		return baoming;
 	}
 
-	public static List QueryIn(String name){
-		List list=new ArrayList();
-	    ResultSet rs=null;
-	    try{
-			con=DBConnection.getConnection();
-			stmt=con.prepareStatement("select * from insider where name= '"+name+"'");
-			rs=stmt.executeQuery();
-			while(rs.next()){
-				insider insider = new insider();
-				insider.setName(rs.getString("name"));
-				insider.setPname(rs.getString("pname"));
-				insider.setDefen(rs.getString("defen"));
-				insider.setQiangduan(rs.getString("qiangduan"));
-				insider.setLanban(rs.getString("lanban"));
-				list.add(insider);
-			}
-		}catch(SQLException e){
-			list=null;
-		}if(rs!=null){
-			try{
-    			rs.close();
-    			}catch(SQLException e){}
-		}
-		DBConnection.Close(con, stmt);
-		return list;
-	}
+
 /*	
 	public static author QueryName(String name){
 		author bookname = new author();
@@ -403,22 +576,45 @@ public static boolean deleteInfo(String three){
 	DBConnection.Close(con, stmt);
 	return flag;
 }
-/*public static boolean updateInfo(String three){
+
+public static boolean deleteInfo_m(String three){
 	boolean flag=false;
 	try{
     	con=DBConnection.getConnection();
-		stmt=con.prepareStatement("update baoming set where three ='"+three+"' "+"values(?,?,?,?,?)" );
-		baoming baoming= new baoming;
-		stmt.setString(1,baoming.getOne());
-		stmt.setString(2,baoming.getTwo());
-		stmt.setString(3,baoming.getThree());
-		stmt.setString(4,baoming.getFour());
-		stmt.setString(5,baoming.getFive());
+		stmt=con.prepareStatement("delete from baoming_m where three ='"+three+"'");
         if(stmt.executeUpdate()==1)flag=true;
 	}catch(SQLException e){
 		System.out.println(e.getMessage());
 	}
 	DBConnection.Close(con, stmt);
 	return flag;
-}*/
+}
+
+public static boolean deleteInfo_w(String three){
+	boolean flag=false;
+	try{
+    	con=DBConnection.getConnection();
+		stmt=con.prepareStatement("delete from baoming_w where three ='"+three+"'");
+        if(stmt.executeUpdate()==1)flag=true;
+	}catch(SQLException e){
+		System.out.println(e.getMessage());
+	}
+	DBConnection.Close(con, stmt);
+	return flag;
+}
+
+
+
+public static boolean deleteRecord(String one){
+	boolean flag=false;
+	try{
+    	con=DBConnection.getConnection();
+		stmt=con.prepareStatement("delete from record where one ='"+one+"'");
+        if(stmt.executeUpdate()==1)flag=true;
+	}catch(SQLException e){
+		System.out.println(e.getMessage());
+	}
+	DBConnection.Close(con, stmt);
+	return flag;
+}
 }

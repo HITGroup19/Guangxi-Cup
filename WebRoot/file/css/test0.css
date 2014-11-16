@@ -1,0 +1,15 @@
+body,div,a,img,p,form,h1,h2,h3,h4,h5,h6,input,textarea,ul,li,dt,dd,dl{margin:0;padding:0;}
+#Logo,#Nav,#Banner,#Content,#Footer{width:900px; margin:0 auto;}
+#Logo{
+height:220px;
+}
+#Banner{
+height:300px;
+color:#054d73;
+font-family :华文新魏;
+text-align:center;
+font-size:27px;
+}
+#Content{
+height:220px;
+}

@@ -31,14 +31,14 @@ public class Dactor extends HttpServlet {
 		String url = "success2.jsp";
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
-		String three=request.getParameter("three");
+		String three= new String(request.getParameter("three").getBytes("ISO-8859-1"),"UTF-8");
 		if(Actionbase.deleteInfo(three)){
 			System.out.print("--");
 			request.setAttribute("message","����Ϊ"+three+"ͼ����Ϣɾ��ɹ���");	
 		}
 		else{
 			request.setAttribute("message", "ɾ��ͼ����Ϣ���?");
-			url = "error4.jsp";
+			url = "error3.jsp";
 			System.out.print("++");
 		}
 		RequestDispatcher rd=request.getRequestDispatcher(url);

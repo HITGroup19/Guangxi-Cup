@@ -1,0 +1,47 @@
+
+body {margin:0;padding:0;}
+.contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif;width:900px; margin:0 auto;}
+.form_hint, .required_notification {font-size: 11px;width:900px; margin:0 auto;}
+
+.contact_form ul {
+    width:750px;
+    list-style-type:none;
+    list-style-position:outside;
+    margin:0 auto;
+    padding:0px;
+}
+.contact_form li{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    position:relative;
+}
+
+.contact_form li:first-child, .contact_form li:last-child {
+    border-bottom:1px solid #777;
+}
+
+.contact_form input, .contact_form textarea {
+    border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+    border-radius:2px;
+}
+.contact_form input:focus, .contact_form textarea:focus {
+    background: #fff;
+    border:1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+}
+/* Button Style */
+
+/*button.submit:hover {
+    opacity:.85;
+    cursor: pointer;
+}*/
+button.submit:active {
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #356b0b inset;
+    -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+    -o-box-shadow: 0 0 10px 5px #356b0b inset;
+
+}

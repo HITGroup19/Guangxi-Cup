@@ -1,6 +1,7 @@
 package action;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -8,6 +9,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import po.number;
 public class Number0 extends HttpServlet {
 
@@ -33,8 +36,10 @@ public class Number0 extends HttpServlet {
 		String url = "error2.jsp";
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
+		HttpSession session=request.getSession(true);
 		number number0 = new number();
 		String number= new String(request.getParameter("number").getBytes("ISO-8859-1"),"UTF-8");
+		session.setAttribute("hao0",number);
 		number0.setNumber(number);
 	  	ArrayList<number> numberinfo = Actionbase.showAllnumber();
 	  	if(numberinfo!=null&&numberinfo.size()>0){

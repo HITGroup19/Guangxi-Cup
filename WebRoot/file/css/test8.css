@@ -1,0 +1,106 @@
+body,div,a,img,p,form,h1,h2,h3,h4,h5,h6,input,textarea,ul,li,dt,dd,dl{margin:0;padding:0;}
+#Logo,#Nav,#Banner,#Content,#Footer{width:900px; margin:0 auto;}
+#Logo{
+height:20px;
+background:url(jpg) no-repeat;/*公共代码中没有定义高度，在这里定义*/
+font-family:华文新魏
+text-align:right;
+
+}
+#logoLink{
+display:block;/*将链接a转化成块状元素，这样才能显示出背景*/
+width:173px;
+height:60px;
+background:url(20101111155901_1902.jpg) no-repeat;
+}
+#Nav{height:50px;}
+#Nav ul{
+height:50px;
+list-style:none;
+background:#4682B4;
+
+}
+#Nav ul li{height:50px; float:left;}
+#Nav ul li a{
+display:block;/*转化成块状元素，因链接是内链元素，若想给它定义下面的属性，必须将它转化成块状元素，*/
+height:50px;
+color:#FFF;
+padding:0 10px;
+line-height:42px;
+font-size:14px;
+font-weight:bold;
+
+font-family :华文新魏;
+text-decoration:none;/*去除链接样式，默认是有下划线的，加上这句就没有任何样式，下划线也没有了*/
+float:left;/*这句一定要加，不然在IE6中会出现，这种效果*/
+}
+#Nav ul li a:hover{background:#68acd3;}
+#Banner{
+height:30px;
+text-align:center;
+background:#68acd3;
+padding: 10px 0;
+font-size:30px;
+font-family:华文新魏;
+color:#fff;
+line-height:30px;
+}
+#Content{
+height:550px;
+background:#d3e7f2;
+font-family :华文新魏;
+font-size:22px;
+}
+#Content #ContentL,#Content #ContentR{float:left;}/*为什么都要左侧浮动，如果不明白就去看第二节*/
+#Content #ContentL{
+width:450px;
+background:#f0f0f0;
+font-size:22px;
+height:550px
+}
+#Content #ContentR{
+width:450px;
+background:#d3e7f2;
+font-size:22px;
+height:550px
+}
+#Footer{
+height:150px;
+text-align:center;
+background:#68acd3;
+padding: 10px 0;
+font-size:22px;
+font-family:Arial, Helvetica, sans-serif;
+color:#fff;
+line-height:22px;
+}
+.input01 {
+border: 1px solid #CDC28D; /* 输入框表框颜色*/
+background-color: #F2F9FD; /* 输入框背景颜色*/
+height: 50px; /*输入框高度*/
+width: 100px; /*输入框宽度*/
+padding-top: 4px; /*输入框里的文字和输入框上边之间的距离（因为输入框比较高，输入的字不是居中的，所以设定此样式）*/
+font-family :华文新魏; /*输入框文字类型*/
+font-size: 22px; /*输入框内文字大小*/
+padding-left: 10px; /*输入框里的文字和输入框左边之间的距离*/
+}
+.input02 {
+border: 1px solid #CDC28D; /* 输入框表框颜色*/
+background-color: #F2F9FD; /* 输入框背景颜色*/
+height: 24px; /*输入框高度*/
+width: 100px; /*输入框宽度*/
+padding-top: 4px; /*输入框里的文字和输入框上边之间的距离（因为输入框比较高，输入的字不是居中的，所以设定此样式）*/
+font-family: Arial, Helvetica, sans-serif; /*输入框文字类型*/
+font-size: 12px; /*输入框内文字大小*/
+padding-left: 10px; /*输入框里的文字和输入框左边之间的距离*/
+}
+.input03 {
+border: 1px solid #CDC28D; /* 输入框表框颜色*/
+background-color: #F2F9FD; /* 输入框背景颜色*/
+height: 24px; /*输入框高度*/
+width: 50px; /*输入框宽度*/
+padding-top: 4px; /*输入框里的文字和输入框上边之间的距离（因为输入框比较高，输入的字不是居中的，所以设定此样式）*/
+font-family: Arial, Helvetica, sans-serif; /*输入框文字类型*/
+font-size: 12px; /*输入框内文字大小*/
+padding-left: 10px; /*输入框里的文字和输入框左边之间的距离*/
+}

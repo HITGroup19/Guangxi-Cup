@@ -38,12 +38,10 @@ public class addactor extends HttpServlet {
 		String two = new String(request.getParameter("two").getBytes("ISO-8859-1"),"UTF-8");
 		String three = new String(request.getParameter("three").getBytes("ISO-8859-1"),"UTF-8");
 		String four = new String(request.getParameter("four").getBytes("ISO-8859-1"),"UTF-8");
-		String five = new String(request.getParameter("five").getBytes("ISO-8859-1"),"UTF-8");
 		baoming.setOne(one);
 		baoming.setTwo(two);
 		baoming.setThree(three);
 		baoming.setFour(four);
-		baoming.setFive(five);
 		if(Actionbase.addInfo(baoming)){
 			request.setAttribute("message", "队伍名"+baoming.getOne()+"的队伍报名成功");
 		}
