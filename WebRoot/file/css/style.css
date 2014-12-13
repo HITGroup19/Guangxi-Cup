@@ -1,7 +1,7 @@
 
 body {margin:0;padding:0;}
-.contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif;width:900px; margin:0 auto;}
-.form_hint, .required_notification {font-size: 11px;width:900px; margin:0 auto;}
+.contact_form h2, .contact_form label,#footer {font-family:Georgia, Times, "Times New Roman", serif;width:900px; margin:0 auto;}
+.form_hint, .required_notification {font-size: 8px;width:900px; margin:0 auto;}
 
 .contact_form ul {
     width:750px;
@@ -44,4 +44,7 @@ button.submit:active {
     -ms-box-shadow: 0 0 10px 5px #356b0b inset;
     -o-box-shadow: 0 0 10px 5px #356b0b inset;
 
+}
+#footer{
+	
 }

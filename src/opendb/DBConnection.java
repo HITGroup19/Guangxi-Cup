@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class DBConnection {
 	static private String user = "root";
-	static private String password = "lhf0";
+	static private String password = "123";
 	private Connection con=null;
 	private PreparedStatement ps = null; 
 	private ResultSet rs = null;

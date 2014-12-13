@@ -30,7 +30,7 @@ public class Jifen extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String url = "error.jsp";
+		String url = "error1.jsp";
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
 		jifen jifen0 = new jifen();

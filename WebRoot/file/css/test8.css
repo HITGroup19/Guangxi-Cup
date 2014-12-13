@@ -46,7 +46,7 @@ color:#fff;
 line-height:30px;
 }
 #Content{
-height:550px;
+height:500px;
 background:#d3e7f2;
 font-family :华文新魏;
 font-size:22px;
@@ -56,16 +56,16 @@ font-size:22px;
 width:450px;
 background:#f0f0f0;
 font-size:22px;
-height:550px
+height:500px
 }
 #Content #ContentR{
 width:450px;
 background:#d3e7f2;
 font-size:22px;
-height:550px
+height:500px
 }
 #Footer{
-height:150px;
+height:120px;
 text-align:center;
 background:#68acd3;
 padding: 10px 0;

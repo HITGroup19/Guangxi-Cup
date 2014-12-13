@@ -73,6 +73,9 @@ border:1px #1E7ACE solid;
 background:#D0F0FF;
 
 }
+#top{
+	height:50px;
+}
 
 #formwrapper {
 
@@ -80,7 +83,7 @@ width:450px;
 
 margin:15px auto;
 
-padding:20px;
+padding:30px;
 
 text-align:left;
 

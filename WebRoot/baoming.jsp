@@ -21,31 +21,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      </div>
      <div id="BannerC">
          <dl> 
-            <dt><a>报名</a></dt> 
-            <dd><a href="check1.jsp">男子常规赛</a></dd> 
-            <dd><a href="check2.jsp">女子常规赛</a></dd> 
-            <dd><a href="check.jsp">混合娱乐赛</a></dd> 
+            <dt><a href="check1.jsp">报名</a></dt>  
         </dl> 
       </div>
       <div id="BannerR">  
-      	<dl>
-      		<dt><a>删除报名信息</a></dt>
-            <dd><a href="dactor_m.jsp">男子常规赛</a></dd> 
-            <dd><a href="dactor_w.jsp">女子常规赛</a></dd> 
-            <dd><a href="dactor.jsp">混合娱乐赛</a></dd> 
-         </dl>
+            <dt><a href="dactor_m.jsp">删除报名信息</a></dt> 
       </div>
 </div>
 <div id="Content">
     <div id="ContentL"><h1>报名须知</h1>
-        <strong><font color ="red" size ="4">要求参赛队员须是哈尔滨工业大学正式在职教职工
-        <br></br>
-    	<br>以基层工会为单位，每单位可报一队，每队限报男队员12人、女队员10人，领队、教练各1人。
-    	
-    	女队报名超过四个队以上（含四个队），组织比赛每名队员只能代表一个队参加比赛</br>
-    		
-    	<br>	严谨外借队员，一经查实取消该队成绩及资格</br>
-    	<br> 删除信息对三种模式报名都有效，修改信息只对娱乐赛有效</br>
+        <strong><font color ="blue" size ="4">
+        <br>1.每队报名人数为18人以内：1名领队，1名教练，16名运动员，其中女运动员不少于3人</br>
+        <br>2.各参赛单位上场运动员中：男教师不少于2人，男学生不多于2人，学生运动员须为在读硕士生，博士生</br>
+    	<br>3.实验中心允许有至多同时2名本科生上场；教研室允许有同时1名本科生上场；其它单位不允许本科生上场</br>
+    	<br>4.参加过三好杯或年龄超过四十五岁的球员请在备注中声明</br>
+    	<br>5.对具有双重身份的参赛运动员，报名时只能代表一个单位，不可一人同时代表多个队参加比赛，否则将取消此人的参赛资格</br>
     	</font></strong>
     		</div>
     	

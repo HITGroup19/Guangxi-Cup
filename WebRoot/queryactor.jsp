@@ -7,6 +7,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <base href="<%=basePath%>">
 	<link href="file/css/test4.css" rel='stylesheet' type='text/css' />
 
@@ -21,17 +22,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         本次光熙杯篮球赛报名名单 </div>
 	
   <div id="Banner">
- 男子常规赛
        <%
   	ArrayList<baoming_m> bm_minfo = Actionbase.showAllInfo2_m();
   	if(bm_minfo!=null&&bm_minfo.size()>0){
   %>
-   <table width="640" border="0" align="center" >
+   <table width="840" border="0" align="center" >
    <tr>
-     <th width="120" colspan="1" align="center"  >实验室名</th>
-     <th width="120" colspan="1" align="center" >教师姓名</th>
-     <th width="120" colspan="1" align="center" >职工号</th>
-     <th width="120" colspan="1" align="center" >身份</th>
+     <th width="60" colspan="1" align="center" >参赛单位</th>
+     <th width="60" colspan="1" align="center" >队员姓名</th>
+     <th width="60" colspan="1" align="center" >号码</th>
+     <th width="60" colspan="1" align="center" >性别</th>
+     <th width="60" colspan="1" align="center" >身份</th>
+     <th width="60" colspan="1" align="center" >学历</th>
+     <th width="60" colspan="1" align="center" >学/职工号</th>
+     <th width="60" colspan="1" align="center" >联系方式</th>
+     <th width="60" colspan="1" align="center" >备注</th>
    </tr>
     <tr></tr>
    <tr></tr>
@@ -43,85 +48,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <tr align="center" bgcolor="#99bbff">
     	<td><%=baoming_m.getOne() %></td>
       	<td><%=baoming_m.getTwo() %></td>  	
-    	<td><%=baoming_m.getThree() %></td>
        	<td><%=baoming_m.getFour() %></td>
+       	<td><%=baoming_m.getFive() %></td>
+      	<td><%=baoming_m.getSix() %></td>  	
+    	<td><%=baoming_m.getSeven() %></td>
+       	<td><%=baoming_m.getEight() %></td>
+    	<td><%=baoming_m.getNine() %></td>
+       	<td><%=baoming_m.getTen() %></td>
    </tr>
     <%} else{%>
      <tr align="center" bgcolor="#ffffff">
     	<td><%=baoming_m.getOne() %></td>
       	<td><%=baoming_m.getTwo() %></td>  	
-    	<td><%=baoming_m.getThree() %></td>
        	<td><%=baoming_m.getFour() %></td>
-   </tr>  
-   <%}}%> 
-   </table>
-	<%}%>
- 女子常规赛
-       <%
-  	ArrayList<baoming_w> bm_winfo = Actionbase.showAllInfo2_w();
-  	if(bm_winfo!=null&&bm_winfo.size()>0){
-  %>
-   <table width="640" border="0" align="center" >
-   <tr>
-     <th width="120" colspan="1" align="center"  >实验室名</th>
-     <th width="120" colspan="1" align="center" >教师姓名</th>
-     <th width="120" colspan="1" align="center" >职工号</th>
-     <th width="120" colspan="1" align="center" >身份</th>
-   </tr>
-    <tr></tr>
-   <tr></tr>
-   <%
-   	for(int i=0;i<bm_winfo.size();i++){
-   		baoming_w baoming_w=(baoming_w)bm_winfo.get(i);
-   		if(i%2==0){
-    %>
-    <tr align="center" bgcolor="#99bbff">
-    	<td><%=baoming_w.getOne() %></td>
-      	<td><%=baoming_w.getTwo() %></td>  	
-    	<td><%=baoming_w.getThree() %></td>
-       	<td><%=baoming_w.getFour() %></td>
-   </tr>
-    <%} else{%>
-     <tr align="center" bgcolor="#ffffff">
-    	<td><%=baoming_w.getOne() %></td>
-      	<td><%=baoming_w.getTwo() %></td>  	
-    	<td><%=baoming_w.getThree() %></td>
-       	<td><%=baoming_w.getFour() %></td>
-   </tr>  
-   <%}}%> 
-   </table>
-	<%}%>
- 混合娱乐赛
-       <%
-  	ArrayList<baoming> bminfo = Actionbase.showAllInfo2();
-  	if(bminfo!=null&&bminfo.size()>0){
-  %>
-   <table width="640" border="0" align="center" >
-   <tr>
-     <th width="120" colspan="1" align="center"  >实验室名</th>
-     <th width="120" colspan="1" align="center" >教师姓名</th>
-     <th width="120" colspan="1" align="center" >职工号</th>
-     <th width="120" colspan="1" align="center" >参赛项目</th>
-   </tr>
-    <tr></tr>
-   <tr></tr>
-   <%
-   	for(int i=0;i<bminfo.size();i++){
-   		baoming baoming=(baoming)bminfo.get(i);
-   		if(i%2==0){
-    %>
-    <tr align="center" bgcolor="#99bbff">
-    	<td><%=baoming.getOne() %></td>
-      	<td><%=baoming.getTwo() %></td>  	
-    	<td><%=baoming.getThree() %></td>
-       	<td><%=baoming.getFour() %></td>
-   </tr>
-    <%} else{%>
-     <tr align="center" bgcolor="#ffffff">
-    	<td><%=baoming.getOne() %></td>
-      	<td><%=baoming.getTwo() %></td>  	
-    	<td><%=baoming.getThree() %></td>
-       	<td><%=baoming.getFour() %></td>
+       	<td><%=baoming_m.getFive() %></td>
+      	<td><%=baoming_m.getSix() %></td>  	
+    	<td><%=baoming_m.getSeven() %></td>
+       	<td><%=baoming_m.getEight() %></td>
+    	<td><%=baoming_m.getNine() %></td>
+       	<td><%=baoming_m.getTen() %></td>
    </tr>  
    <%}}%> 
    </table>

@@ -1,8 +1,8 @@
-body,div,a,img,p,form,h1,h2,h3,h4,h5,h6,input,textarea,ul,li,dt,dd,dl{margin:0;padding:0;}
+body,div,a,img,p,form,h1,h2,h3,h4,h5,h6,input,textarea,ul,li,dt,dd,dl{margin:0;padding:0;list-style:none;}
 #Logo,#Nav,#Banner,#Content,#Footer{width:900px; margin:0 auto;}
 #Logo{
 height:40px;
-background:url(hit.jpg) no-repeat;/*公共代码中没有定义高度，在这里定义*/
+background:url(20141212091616.jpg) no-repeat;/*公共代码中没有定义高度，在这里定义*/
 font-family:华文新魏;
 font-size:22px;
 text-align:right;
@@ -12,7 +12,7 @@ text-align:right;
 display:block;/*将链接a转化成块状元素，这样才能显示出背景*/
 width:173px;
 height:60px;
-background:url(20101111155901_1902.jpg) no-repeat;
+background:url(20141211225136.jpg) no-repeat;
 }
 #Nav{height:50px;}
 #Nav ul{
@@ -30,16 +30,50 @@ padding:0 10px;
 line-height:42px;
 font-size:14px;
 font-weight:bold;
-
 font-family :华文新魏;
 text-decoration:none;/*去除链接样式，默认是有下划线的，加上这句就没有任何样式，下划线也没有了*/
 float:left;/*这句一定要加，不然在IE6中会出现，这种效果*/
 }
 #Nav ul li a:hover{background:#68acd3;}
-#Banner{
-height:450px;
-background:url(apic459.jpg) no-repeat;
+.list{
+line-height:20px;
+text-align:left;
+padding:4px;
+font-weight:normal;
 }
+.menu1{
+width:120px;
+height:auto;
+margin:6px 4px 0px 0px;
+border:1px solid #9CDD75;
+background-color:#F1FBEC;
+color:#336601;
+padding:6px 0px 0px 0px;
+cursor:hand;
+overflow-y:hidden;
+filter:Alpha(opacity=70);
+-moz-opacity:0.7;
+}
+.menu2{
+width:120px;
+height:18px;
+margin:6px 4px 0px 0px;
+background-color:#F5F5F5;
+color:#999999;
+border:1px solid #EEE8DD;
+padding:6px 0px 0px 0px;
+overflow-y:hidden;
+cursor:hand;
+}
+#Banner { width:900px; height:450px;margin:0px auto; background:#68acd3; position:relative; overflow:hidden;}
+#Banner .oUlplay { width:99999px; position:absolute; left:0; top:0;}
+#Banner .oUlplay li{ float:left;}
+#Banner .pre{ cursor:pointer; width:45px; height:45px; background:url(l.png) no-repeat; position:absolute; top:190px; left:10px; z-index:10;}
+#Banner .next{ cursor:pointer; width:45px; height:45px; background:url(r.png) no-repeat; position:absolute; top:190px; right:10px; z-index:10;}
+#Banner .smalltitle {width:900px; height:10px; position:absolute; bottom:15px; z-index:10}
+#Banner .smalltitle ul{ width:120px; margin:0 auto;}
+#Banner .smalltitle ul li{ width:10px; height:10px; margin:0 5px; border-radius:10px; background:#ffffff; float:left; overflow:hidden;*display:inline;*zoom:1;}
+#Banner .smalltitle .thistitle{ background:#009FCC;}
 #Content{overflow:hidden; background:#d3e7f2;font-family :华文新魏;}
 #Content #ContentL,#Content #ContentR{float:left; padding:15px;}/*为什么都要左侧浮动，如果不明白就去看第二节*/
 #Content #ContentL{width:570px; background:#f0f0f0;}

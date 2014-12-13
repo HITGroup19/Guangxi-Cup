@@ -39,6 +39,7 @@ public class Number0 extends HttpServlet {
 		HttpSession session=request.getSession(true);
 		number number0 = new number();
 		String number= new String(request.getParameter("number").getBytes("ISO-8859-1"),"UTF-8");
+		String password= new String(request.getParameter("password").getBytes("ISO-8859-1"),"UTF-8");
 		session.setAttribute("hao0",number);
 		number0.setNumber(number);
 	  	ArrayList<number> numberinfo = Actionbase.showAllnumber();
@@ -46,9 +47,10 @@ public class Number0 extends HttpServlet {
 	  	   	for(int i=0;i<numberinfo.size();i++){
 	  	   		number number1 =(number)numberinfo.get(i);
 	  	   		String Number = number1.getNumber();
+	  	   		String Password = number1.getPassword();
 	  	   		if(number!= null)
 	  	   		{
-	  	   			if(number.equals(Number) == true)
+	  	   			if(number.equals(Number) == true&&password.equals(Password))
 	   					{
 	   					url = "update.jsp";
 	   					}

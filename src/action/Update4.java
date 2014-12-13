@@ -46,12 +46,14 @@ public class Update4 extends HttpServlet {
 			conn=DBConnection.getConnection(); 
 			stmt=conn.createStatement();
 			System.out.print("---");
+			String four= new String(request.getParameter("four").getBytes("ISO-8859-1"),"UTF-8");
+			String five= new String(request.getParameter("five").getBytes("ISO-8859-1"),"UTF-8");
 			String eight = "已结束";
-			stmt.execute("update record set eight = '"+eight+"'where one = '"+one+"'");
+			stmt.execute("update record set four='"+four+"', five='"+five+"',eight = '"+eight+"'where one = '"+one+"'");
 			//System.out.print("update record set one = '"+one+"',two = '"+two+"',three = '"+three+"',four = '"+four+"',five = '"+five+"' where four = '"+one+"'");
 			//RequestDispatcher rd=request.getRequestDispatcher(url);
 			//rd.forward(request, response);
-			request.getRequestDispatcher("record1.jsp").forward(request, response); 
+			request.getRequestDispatcher("test1.jsp").forward(request, response); 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

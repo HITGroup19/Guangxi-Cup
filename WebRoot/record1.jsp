@@ -127,6 +127,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 </div>
 <div id="Footer">
+	
 	<form action="Updateresult" method="post" name="form">
 	<input type="hidden" name="rone" value=<%=ooo%> ></input>
 	<p>主场胜负：
@@ -135,6 +136,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<input type="submit"class="input03" name="submit" value="确定"></input>
 	</p>
 	</form>
+	
 	<form action="Updateresult" method="post" name="form">
 	<input type="hidden" name="rone" value=<%=oooo%> ></input>
 	<p>客场胜负：
@@ -143,11 +145,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<input type="submit"class="input03" name="submit" value="确定"></input>
 	</p>
 	</form>
-	 	<form action="Update4" method="post" name="form">
+	<form action="Update4" method="post" name="form">
 	<input type="hidden" name="one" value=<%=oo%> />    
-	<input type="submit" class="input02" name="submit" value="比赛结束">
+	<p>主场总分：<input type="text" name="four" size ="15"/></p>
+	<p>客场总分：<input type="text" name="five" size ="15"/></p>
+	<p><input type="submit" class="input02" name="submit" value="比赛结束" /></p>
 	</form>
-	<a href="test2.jsp">返回主页面</a>
 </div>
 </body>
 </html>

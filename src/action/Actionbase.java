@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 
 
+
+
 import java.util.List;
 
 
@@ -12,6 +14,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
+import java.io.*;
+
 import opendb.DBConnection;
 import po.*;
 
@@ -51,6 +55,29 @@ public class Actionbase {
 		DBConnection.Close(con, stmt);
 		return recordinfo;
 	}
+	public static ArrayList<record_y> showAllInfo_y(){	
+	ArrayList<record_y> record_yinfo = new ArrayList<record_y>();
+	try{
+		con=DBConnection.getConnection();
+		stmt=con.prepareStatement("select * from record_y order by one asc ");
+		rs=stmt.executeQuery();
+		while(rs.next()){
+			record_y record_y = new record_y();
+			record_y.setOne(rs.getString("one"));
+			record_y.setTwo(rs.getString("two"));
+			record_y.setThree(rs.getString("three"));
+			record_yinfo.add(record_y);
+		}
+	}catch(SQLException e){
+		record_yinfo=null;
+	}if(rs!=null){
+		try{
+			rs.close();
+			}catch(SQLException e){}
+	}
+	DBConnection.Close(con, stmt);
+	return record_yinfo;
+}
 	
 	public static ArrayList<result> showAllInfo1(){
 		
@@ -217,6 +244,12 @@ public static ArrayList<baoming_m> showAllInfo2_m(){
 			baoming_m.setTwo(rs.getString("two"));
 			baoming_m.setThree(rs.getString("three"));
 			baoming_m.setFour(rs.getString("four"));
+			baoming_m.setFive(rs.getString("five"));
+			baoming_m.setSix(rs.getString("six"));
+			baoming_m.setSeven(rs.getString("seven"));
+			baoming_m.setEight(rs.getString("eight"));
+			baoming_m.setNine(rs.getString("nine"));
+			baoming_m.setTen(rs.getString("ten"));
 			bm_minfo.add(baoming_m);
 		}
 	}catch(SQLException e){
@@ -230,31 +263,7 @@ public static ArrayList<baoming_m> showAllInfo2_m(){
 	return bm_minfo;
 }
 
-public static ArrayList<baoming_w> showAllInfo2_w(){
-	
-	ArrayList<baoming_w> bm_winfo = new ArrayList<baoming_w>();
-	try{
-		con=DBConnection.getConnection();
-		stmt=con.prepareStatement("select * from baoming_w order by one asc");
-		rs=stmt.executeQuery();
-		while(rs.next()){
-			baoming_w baoming_w = new baoming_w();
-			baoming_w.setOne(rs.getString("one"));
-			baoming_w.setTwo(rs.getString("two"));
-			baoming_w.setThree(rs.getString("three"));
-			baoming_w.setFour(rs.getString("four"));
-			bm_winfo.add(baoming_w);
-		}
-	}catch(SQLException e){
-		bm_winfo=null;
-	}if(rs!=null){
-		try{
-			rs.close();
-			}catch(SQLException e){}
-	}
-	DBConnection.Close(con, stmt);
-	return bm_winfo;
-}
+
 
 public static boolean addInfo(baoming baoming){	
 	    boolean flag=false;
@@ -273,38 +282,30 @@ public static boolean addInfo(baoming baoming){
 		return flag;
     }
 
-public static boolean addInfo_w(baoming_w baoming_w){	
-    boolean flag=false;
-    try{
-    	con=DBConnection.getConnection();
-		stmt=con.prepareStatement("insert into baoming_w "+"values(?,?,?,?)");
-		stmt.setString(1,baoming_w.getOne());
-		stmt.setString(2,baoming_w.getTwo());
-		stmt.setString(3,baoming_w.getThree());
-		stmt.setString(4,baoming_w.getFour());
-        if(stmt.executeUpdate()==1)flag=true;
-	}catch(SQLException e){
-		System.out.println(e.getMessage());
-	}
-	DBConnection.Close(con, stmt);
-	return flag;
-}
+
 
 public static boolean addInfo_m(baoming_m baoming_m){	
     boolean flag=false;
     try{
     	con=DBConnection.getConnection();
-		stmt=con.prepareStatement("insert into baoming_m "+"values(?,?,?,?)");
+		stmt=con.prepareStatement("insert into baoming_m "+"values(?,?,?,?,?,?,?,?,?,?)");
 		stmt.setString(1,baoming_m.getOne());
 		stmt.setString(2,baoming_m.getTwo());
 		stmt.setString(3,baoming_m.getThree());
 		stmt.setString(4,baoming_m.getFour());
+		stmt.setString(5,baoming_m.getFive());
+		stmt.setString(6,baoming_m.getSix());
+		stmt.setString(7,baoming_m.getSeven());
+		stmt.setString(8,baoming_m.getEight());
+		stmt.setString(9,baoming_m.getNine());
+		stmt.setString(10,baoming_m.getTen());
         if(stmt.executeUpdate()==1)flag=true;
 	}catch(SQLException e){
 		System.out.println(e.getMessage());
 	}
 	DBConnection.Close(con, stmt);
 	return flag;
+	
 }
 
 public static boolean addInfo1(record record){	
@@ -328,6 +329,21 @@ public static boolean addInfo1(record record){
 	return flag;
 }	
 
+public static boolean addInfo1_y(record_y record_y){	
+    boolean flag=false;
+    try{
+    	con=DBConnection.getConnection();
+		stmt=con.prepareStatement("insert into record_y "+"values(?,?,?)");
+		stmt.setString(1,record_y.getOne());
+		stmt.setString(2,record_y.getTwo());
+		stmt.setString(3,record_y.getThree());
+        if(stmt.executeUpdate()==1)flag=true;
+	}catch(SQLException e){
+		System.out.println(e.getMessage());
+	}
+	DBConnection.Close(con, stmt);
+	return flag;
+} 
 public static boolean addaplan(aplan aplan){	
     boolean flag=false;
     try{
@@ -552,6 +568,7 @@ public static ArrayList<number> showAllnumber(){
 		while(rs.next()){
 			number number = new number();
 			number.setNumber(rs.getString("number"));
+			number.setPassword(rs.getString("password"));
 			numberinfo.add(number);
 		}
 	}catch(SQLException e){
@@ -564,11 +581,11 @@ public static ArrayList<number> showAllnumber(){
 	DBConnection.Close(con, stmt);
 	return numberinfo;
 	}
-public static boolean deleteInfo(String three){
+public static boolean deleteInfo(String eight){
 	boolean flag=false;
 	try{
     	con=DBConnection.getConnection();
-		stmt=con.prepareStatement("delete from baoming where three ='"+three+"'");
+		stmt=con.prepareStatement("delete from baoming where eight ='"+eight+"'");
         if(stmt.executeUpdate()==1)flag=true;
 	}catch(SQLException e){
 		System.out.println(e.getMessage());
@@ -577,11 +594,11 @@ public static boolean deleteInfo(String three){
 	return flag;
 }
 
-public static boolean deleteInfo_m(String three){
+public static boolean deleteInfo_m(String eight){
 	boolean flag=false;
 	try{
     	con=DBConnection.getConnection();
-		stmt=con.prepareStatement("delete from baoming_m where three ='"+three+"'");
+		stmt=con.prepareStatement("delete from baoming_m where eight ='"+eight+"'");
         if(stmt.executeUpdate()==1)flag=true;
 	}catch(SQLException e){
 		System.out.println(e.getMessage());
@@ -617,4 +634,63 @@ public static boolean deleteRecord(String one){
 	DBConnection.Close(con, stmt);
 	return flag;
 }
+public static tongzhi QueryTZ(String one){
+	tongzhi tongzhi = new tongzhi();
+    ResultSet rs=null;
+    try{
+		con=DBConnection.getConnection();
+		stmt=con.prepareStatement("select * from book where one= '"+one+"'");
+		rs=stmt.executeQuery();
+		while(rs.next()){
+			tongzhi.setOne(rs.getString("one"));
+			tongzhi.setTwo(rs.getString("two"));
+		}
+	}catch(SQLException e){
+		tongzhi=null;
+	}if(rs!=null){
+		try{
+			rs.close();
+			}catch(SQLException e){}
+	}
+	DBConnection.Close(con, stmt);
+	return tongzhi;
+}
+
+
+
+
+public boolean employeeAdd(String employeeName,String age,String pic){
+	  PreparedStatement pstmt = null;
+	  try{
+		   File file = new File(pic);
+		   FileInputStream fis = new FileInputStream(file);
+	   if(fis == null)
+		   System.out.print("-----");
+	   else
+		  System.out.print("+++");
+	   con=DBConnection.getConnection();
+	   String strSQL="INSERT INTO photo VALUES(?,?,?)";
+	   pstmt=con.prepareStatement(strSQL);
+	   pstmt.setString(1, employeeName);
+	   pstmt.setString(2, age);
+	   pstmt.setBinaryStream(3, fis,file.length());
+	   if(pstmt.executeUpdate()>0)
+	    return true;
+	   else
+	    return false;
+	  }catch(SQLException ex){
+	   ex.printStackTrace();
+	   return false;
+	  }catch(IOException ex){
+	   ex.printStackTrace();
+	   return false;
+	  }finally{
+	   try{
+	    pstmt.close();
+	    con.close();
+	   }catch(Exception ex){
+	    
+	   }
+	  }
+	 }
 }

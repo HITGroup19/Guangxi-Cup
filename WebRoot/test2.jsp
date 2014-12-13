@@ -20,27 +20,48 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	<li><a href="baoming.jsp"><h1>参赛报名</h1></li>
      	<li><a href="queryactor.jsp"><h1>查看报名</h1></li>
         <li><a href="queryplan.jsp"><h1>赛事查看</h1></a></li>
-        <li><a href="queryrecord.jsp"><h1>战绩查询</h1></a></li>
-        <li><a href="plan.jsp"><h1>赛事安排</h1></a></li>
-        <li><a href="jifen.jsp"><h1>记分统计</h1></a></li>
+        <li><a href="query.jsp"><h1>战报查询</h1></a></li>
+        <li><a href="queryaplan.jsp"><h1>赛程安排</h1></a></li>
     </ul>
 </div>
-<div id="Banner"></div>
+<div id="Banner">
+    <div class="pre"></div>
+    <div class="next"></div>
+    <div class="smalltitle">
+      <ul>
+        <li class="thistitle"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <ul class="oUlplay">
+       <li><a href="test2.jsp" target="_blank"><img src="image/99.jpg"/></a></li>
+       <li><a href="test2.jsp" target="_blank"><img src="image/687237_505653_234.jpg"/></a></li>
+       <li><a href="test2.jsp" target="_blank"><img src="image/17659577_1358934737533_2345.jpg"/></a></li>
+       <li><a href="test2.jsp" target="_blank"><img src="image/1363932000678.jpg"/></a></li>
+       <li><a href="test2.jsp" target="_blank"><img src="image/19955421_1366189671589.jpg"/></a></li>
+       <li><a href="test2.jsp" target="_blank"><img src="image/1348653583529.jpg"/></a></li>
+    </ul>
+</div>
 <div id="Content">
-    <div id="ContentL"><h1>赛事公告</h1>
-        <strong> 2014年计算机学院光熙杯篮球赛将于10月17到19日举行 
-    	<br>请各实验室参赛人员于15日之前到报名处报名</br>
+    <div id="ContentL"><h1>赛事通知</h1>
+        <strong> 本届计算机学院光熙杯篮球赛将于2014年6月举行 
+    	<br>请计算机学院、软件学院各单位参赛之前完成报名</br>
     		届时请各参赛队伍做好准备,预祝本次比赛圆满成功</div>
     <div id="ContentR"><h1>温馨提示！</h1>
-    <strong>友谊第一 比赛第二</strong>
-	<strong>希望大家在本次比赛中玩的开心！</strong>
+   <strong>友谊第一，比赛第二</strong>
+    <strong>强身健体，共促和谐</strong>
+	<strong>展现哈工大计算机人的风采！</strong>
     
     
     </div>
 </div>
 <div id="Footer">
     <p>哈尔滨工业大学</p>
-    <p>网页制作人:徐天宇/卞昊/陈焱锋/李会峰</p>
+    <p>fuzihang@hit.edu.cn</p>
 </div>
 </body>
 </html>

@@ -5,34 +5,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<meta http-equiv="refresh" content="1;URL=record.jsp">
-<html>
- <head> 
- <title></title> 
- </head>  
- <script language="javascript" type="text/javascript">     
-         
- 	alert("照片上传成功！");     
-
- </script>  
-	<style type="text/css">    
-	 body{    
-      background-image: url(images/1363931951521.jpg);    
-      background-repeat: repeat-x;    
-	 }    
- 	</style>
-  <body>
-  <%
- 	 MultipartRequest theMultipartRequest = new MultipartRequest(request,"C:\\record\\",10*1024*1024);
- 	 Enumeration theEnumeration= theMultipartRequest.getFileNames();
- 	 int fileCount = 0;
- 	 while(theEnumeration.hasMoreElements()){
- 	 	fileCount++;
- 	 	String fieldName = (String)theEnumeration.nextElement();
- 	 	String fileName = theMultipartRequest.getFilesystemName(fieldName);
- 	 	String contentType = theMultipartRequest.getContentType(fieldName);
- 	 	File theFile = theMultipartRequest.getFile(fieldName);
- 	 }  
-   %>
-  </body>
-</html>
+<HTML>    
+  <HEAD>    
+  <TITLE>Image   File   </TITLE>    
+  <meta   http-equiv="Content-Type"   content="text/html;   charset=gb2312">    
+  </HEAD>    
+  <FORM   METHOD=POST   ACTION="testimage.jsp">    
+  <INPUT   TYPE="text"   NAME="content"><BR>    
+  <INPUT   TYPE="file"   NAME="image"><BR>    
+  <INPUT   TYPE="submit" name="提交"></FORM>    
+  <BODY>    
+  </BODY>    
+  </HTML>  

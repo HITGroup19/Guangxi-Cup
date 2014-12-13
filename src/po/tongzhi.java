@@ -1,41 +1,31 @@
 package po;
 
 public class tongzhi {
-		private String date;
-		private String actor;
-		private String where;
-		public tongzhi(){
-			date = null;
-			actor = null;
-			where = null;
-		}
-		
-		public tongzhi(String date,String actor,String where){
-			this.date=date;
-			this.actor=actor;
-			this.where=where;
-		}
-		public void setActor(String actor) {
-			this.actor = actor;
-		}
+	private String one;
+	private String two;
+	public tongzhi(){
+		one = null;
+		two = null;
+	}
+	
+	public tongzhi(String one,String two){
+		this.one = one;
+		this.two= two;
+	}
+	public void setOne(String one) {
+		this.one = one;
+	}
 
-		public String getActor() {
-			return actor;
-		}
+	public  String getOne() {
+		return one;
+	}
 
-		public void setDate(String date) {
-			this.date = date;
-		}
+	public void setTwo(String two) {
+		this.two = two;
+	}
 
-		public String getDate() {
-			return date;
-		}
-		public void setWhere(String where) {
-			this.where = where;
-		}
-
-		public String getWhere() {
-			return where;
-		}
+	public String getTwo() {
+		return two;
+	}
 
 }

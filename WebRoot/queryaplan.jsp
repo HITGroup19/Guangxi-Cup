@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   %>
    <table width="720" border="0" align="center" >
    <tr>
-   	<th width="120" colspan="1" align="center"  >主场队伍</th>
+   	<th width="120" colspan="1" align="center"  >赛程号</th>
      <th width="120" colspan="1" align="center"  >主场队伍</th>
      <th width="120" colspan="1" align="center" >客场队伍</th>
      <th width="120" colspan="1" align="center" >比赛时间</th>
@@ -72,9 +72,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    </table>
 	<%}%>
 	<p><a href="addaplan.jsp">添加比赛队伍</a></p>
-<div id="Content"></div>
 <div id="Footer">
-<p><a href="plan.jsp">返回上一层</a></p>
+<p><a href="test2.jsp">返回上一层</a></p>
 </div>
   </body>
 </html>
