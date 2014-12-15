@@ -15,13 +15,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </div>
 <div id="Banner">
 	<div id="BannerL">
-     	<li><a href="queryresult.jsp">查询常规赛名次</a></li>
+     	<a href="queryresult.jsp"><font color="blue">查询常规赛名次</font></a>
      </div>
      <div id="BannerC">
-     <li><a href="queryresult_y.jsp">查询投篮赛名次</a></li>
+     <a href="queryresult_y.jsp"><font color="blue">查询投篮赛名次</font></a>
       </div>
       <div id="BannerR">  
-        <li><a href="queryrecord.jsp">查询比赛记录</a></li>
+        <a href="queryrecord.jsp"><font color="blue">查询比赛记录</font></a>
       </div>
 </div>
 <div id="Content">  

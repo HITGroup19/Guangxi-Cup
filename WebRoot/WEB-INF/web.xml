@@ -235,6 +235,20 @@
     <servlet-name>Tongzhi</servlet-name>
     <servlet-class>action.Tongzhi</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateTZ</servlet-name>
+    <servlet-class>action.UpdateTZ</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Dcicle</servlet-name>
+    <servlet-class>action.Dcicle</servlet-class>
+  </servlet>
+
+
 
 
 
@@ -415,7 +429,15 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>Tongzhi</servlet-name>
-    <url-pattern>/servlet/Tongzhi</url-pattern>
+    <url-pattern>/Tongzhi</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateTZ</servlet-name>
+    <url-pattern>/UpdateTZ</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Dcicle</servlet-name>
+    <url-pattern>/Dcicle</url-pattern>
   </servlet-mapping>
     <welcome-file-list>
     <welcome-file>test0.jsp</welcome-file>

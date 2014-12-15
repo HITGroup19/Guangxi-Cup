@@ -18,13 +18,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body>
 <div id="Logo"></div>
 <div id="Banner">
-      <form action="Number_m" method="post" name="form">
+      <form action="Number_m" method="post" name="form1">
             <p><span >请输入您的学号或职工号：</span>
   	<input type="text" style="height:27" name="number" placeholder="请输入您的学号或职工号"/></p>  	           
   	            <p><span >请输入您的密码：</span>
   	<input type="text" style="height:27" name="password" placeholder="请输入密码"/>
   	
-	<input type="image" src="file/css/16.png" value="提交">
+	<input type="image"  src="file/css/16.png" value="提交">
 	</form>
 </div>
 <div id="Content"></div>

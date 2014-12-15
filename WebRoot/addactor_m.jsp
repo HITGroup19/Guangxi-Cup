@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort
@@ -9,13 +9,39 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>HTML5 Contact Form</title>
     <link rel="stylesheet" href="file/css/style.css" type="text/css">
 </head>
 <body>
  <% String xxx = (String)session.getAttribute("hao1");
   %>
+  <script language="javascript">
+function checkit()
+	{
+		if(contact_form.two.value==""){
+		alert("请填写姓名！");
+		contact_form.two.select();
+		return false;
+		}
+		if(contact_form.three.value==""){
+		alert("请填写号码!");
+		contact_form.three.select();
+		return false;
+		}
+		if(contact_form.four.value==""){
+		alert("请填写性别!");
+		contact_form.four.select();
+		return false;
+		}
+		if(contact_form.five.value==""){
+		alert("请填写联系方式!");
+		contact_form.five.select();
+		return false;
+		}
+		return true;
+	}
+</script>
 <form class="contact_form" action="Addactor_m" method="post" name="contact_form">
 <ul>
     <li>
@@ -59,26 +85,42 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </ul>
 <ul>
     <li>
-        <label >队员姓名：</label>
+        <label >球员姓名：</label>
         <input type="text" name="two" />
     </li>
 </ul>
 <ul>
 <li>
-    <label >号码：</label>
-    <input type="text" name="four" />
-</li>
-</ul>
-<ul>
-<li>
-    <label for="name">性别：</label>
-    <input type="text" name="five" />
+    <label >球员号码：</label>
+    <input type="text" name="three" />
 </li>
 </ul>
 <ul>
 	<li>
+    	<label for="website">球员性别: </label>
+        <select name="four">
+			<option value="男">男</option>
+			<option value="女">女</option>
+		</select>
+	</li>
+</ul>
+<ul>
+	<li>
+    <label for="name">联系方式：</label>
+    <input type="text" name="five" />
+	</li>
+</ul>
+<ul>
+	<li>
+    <label for="email">学号或职工号：</label>
+	<input type="hidden" name="six" value=<%=xxx%> >
+	<%=xxx%>
+	</li>
+</ul>
+<ul>
+	<li>
     	<label for="website">身份: </label>
-        <select name="six">
+        <select name="seven">
 			<option value="领队">领队</option>
 			<option value="教练">教练</option>
 			<option value="球员">球员</option>
@@ -89,7 +131,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <ul>
 	<li>
     	<label for="name">学历: </label>
-        <select name="seven">
+        <select name="eight">
 			<option value="教师">教师</option>
 			<option value="本科">本科</option>
 			<option value="硕士">硕士</option>
@@ -99,26 +141,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </ul>
 <ul>
 	<li>
-    <label for="email">学号或职工号：</label>
-	<input type="hidden" name="eight" value=<%=xxx%> >
-	<%=xxx%>
+    	<label for="name">三好杯球员: </label>
+        <select name="nine">
+			<option value="否">否</option>
+			<option value="是">是</option>
+		</select>
 	</li>
 </ul>
 <ul>
 	<li>
-    <label for="name">联系方式：</label>
-    <input type="text" name="nine" />
+    	<label for="name">年龄段: </label>
+        <select name="ten">
+			<option value="~45">~45</option>
+			<option value="45~55">45~55</option>
+			<option value="55~">55~</option>
+		</select>
 	</li>
 </ul>
 <ul>
 <li>
-    <label for="name">备注：</label>
-    <input type="text" name="ten" />
-</li>
-</ul>
-<ul>
-<li>
-    <button class="submit" type="submit">提交</button>
+    <button class="submit"  onclick="return checkit();" type="submit">提交</button>
     <button class="reset" type="reset">重置</button>
 </li>
 </ul>

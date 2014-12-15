@@ -109,10 +109,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <button class="reset" type="reset">重置</button>
 </li>
 </ul>
+<ul>
+<li>
+<a href="queryaplan.jsp">返回上一层</a>
+</li>
+</ul>
  </form>
- <div id="footer">
-  <p><a href="queryaplan.jsp">返回上一层</a></p>
- </div>
   </body>
 </html>
 

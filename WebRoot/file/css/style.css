@@ -45,6 +45,9 @@ button.submit:active {
     -o-box-shadow: 0 0 10px 5px #356b0b inset;
 
 }
+a{
+	text-decoration:none;
+}
 #footer{
 	
 }

@@ -6,7 +6,17 @@ background:url(20141212091616.jpg) no-repeat;/*公共代码中没有定义高度
 font-family:华文新魏;
 font-size:22px;
 text-align:right;
+text-decoration:none;
+}
+#Logo font{
+font-family :宋体;
+text-decoration:none;
 
+}
+#Logo a{
+font-size:22px;
+font-family :华文新魏;
+text-decoration:none;
 }
 #logoLink{
 display:block;/*将链接a转化成块状元素，这样才能显示出背景*/
@@ -76,7 +86,14 @@ cursor:hand;
 #Banner .smalltitle .thistitle{ background:#009FCC;}
 #Content{overflow:hidden; background:#d3e7f2;font-family :华文新魏;}
 #Content #ContentL,#Content #ContentR{float:left; padding:15px;}/*为什么都要左侧浮动，如果不明白就去看第二节*/
-#Content #ContentL{width:570px; background:#f0f0f0;}
+#Content #ContentL{
+width:570px;
+background:#f0f0f0;
+height:125px;
+}
+#Content #ContentL a{
+text-decoration:none;
+}
 #Content #ContentL h1{
 height:50px;
 line-height:50px;/*设置行距，目的是保证h1中的文字垂直居中*/

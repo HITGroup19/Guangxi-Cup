@@ -16,6 +16,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
 <body>
+<script language="javascript">
+function checkit()
+	{
+		if(form.number.value==""){
+		alert("...");
+		form.number.select();
+		return FALSE;
+		}
+		if(form.pwd.value==""){
+		alert("...");
+		form.number.select();
+		return FALSE;
+		}
+		return TRUE;
+	}
+</script>
 <div id="Logo"></div>
 <div id="Banner">
  	 <form action="Number" method="post" name="form">

@@ -19,12 +19,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <form class="contact_form" action="Update" method="post" name="contact_form">
 <ul>
     <li>
-         <h2>球员报名</h2>
+         <h2>修改报名信息</h2>
 
     </li>
+</ul>
+ <ul>
     <li>
-        <label for="name">参赛单位：</label>
-         <select name="one">
+        <label >参赛单位：</label>
+        <select name="one">
         <option value="计算机接口技术与接口系统国家重点专业实验室">计算机接口技术与接口系统国家重点专业实验室</option>
 		<option value="模式识别研究中心">模式识别研究中心</option>
 		<option value="航天软件工程研究中心">航天软件工程研究中心</option>
@@ -52,32 +54,47 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<option value="感知计算研究中心">感知计算研究中心</option>
 		<option value="哈工大机器人创新基地">哈工大机器人创新基地</option>
 		<option value="计算机科学技术研究所">计算机科学技术研究所</option>
-		
-</select>
-         
-    </li>
-        <li>
-        <label for="name">队员姓名：</label>
-         <input type="text" name="two" />
+		</select>    
     </li>
 </ul>
-
 <ul>
-<li>
-    <label >号码：</label>
-    <input type="text" name="four" />
-</li>
+    <li>
+        <label >球员姓名：</label>
+        <input type="text" name="two" />
+    </li>
 </ul>
 <ul>
 <li>
-    <label for="name">性别：</label>
-    <input type="text" name="five" />
+    <label >球员号码：</label>
+    <input type="text" name="three" />
 </li>
 </ul>
 <ul>
 	<li>
+    	<label for="website">球员性别: </label>
+        <select name="four">
+			<option value="男">男</option>
+			<option value="女">女</option>
+		</select>
+	</li>
+</ul>
+<ul>
+	<li>
+    <label for="name">联系方式：</label>
+    <input type="text" name="five" />
+	</li>
+</ul>
+<ul>
+	<li>
+    <label for="email">学号或职工号：</label>
+	<input type="hidden" name="six" value=<%=xx%> >
+	<%=xx%>
+	</li>
+</ul>
+<ul>
+	<li>
     	<label for="website">身份: </label>
-        <select name="six">
+        <select name="seven">
 			<option value="领队">领队</option>
 			<option value="教练">教练</option>
 			<option value="球员">球员</option>
@@ -88,7 +105,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <ul>
 	<li>
     	<label for="name">学历: </label>
-        <select name="seven">
+        <select name="eight">
 			<option value="教师">教师</option>
 			<option value="本科">本科</option>
 			<option value="硕士">硕士</option>
@@ -98,22 +115,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </ul>
 <ul>
 	<li>
-    <label for="email">学号或职工号：</label>
-	<input type="hidden" name="eight" value=<%=xx%> >
-	<%=xx%>
+    	<label for="name">三好杯球员: </label>
+        <select name="nine">
+			<option value="是">是</option>
+			<option value="否">否</option>
+		</select>
 	</li>
 </ul>
 <ul>
 	<li>
-    <label for="name">联系方式：</label>
-    <input type="text" name="nine" />
+    	<label for="name">年龄段: </label>
+        <select name="ten">
+			<option value="~45">~45</option>
+			<option value="45~55">45~55</option>
+			<option value="55~">55~</option>
+		</select>
 	</li>
-</ul>
-<ul>
-<li>
-    <label for="name">备注：</label>
-    <input type="text" name="ten" />
-</li>
 </ul>
 <ul>
 <li>

@@ -28,9 +28,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <table width="640" border="0" align="center" >
    <tr>
      <th width="80" colspan="1" align="center"  >队伍名</th>
+     <th width="80" colspan="1" align="center" >战区名</th>  
      <th width="80" colspan="1" align="center" >胜场数</th>
-     <th width="80" colspan="1" align="center" >负场数</th>
-     <th width="80" colspan="1" align="center" >名次</th>  
+     <th width="80" colspan="1" align="center" >负场数</th> 
    </tr>
     <tr></tr>
    <tr></tr>
@@ -43,14 +43,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<td><%=result.getOne() %></td>
       	<td><%=result.getTwo() %></td>  	
     	<td><%=result.getThree() %></td>
-    	<td>第<%=i+1%>名</td>
+    	<td><%=result.getFour() %></td>
    </tr>
     <%} else{%>
      <tr align="center" bgcolor="#ffffff">
     	<td><%=result.getOne() %></td>
       	<td><%=result.getTwo() %></td>  	
     	<td><%=result.getThree() %></td>
-    	<td>第<%=i+1%>名</td>
+    	<td><%=result.getFour() %></td>
    </tr>  
    <%}}%> 
    </table>

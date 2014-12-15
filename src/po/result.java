@@ -4,16 +4,19 @@ public class result {
 	private String one;
 	private String two;
 	private String three;
+	private String four;
 	public result(){
 		one = null;
 		two = null;
 		three = null;
+		four = null;
 	}
 	
-	public result(String one,String two,String three){
+	public result(String one,String two,String three,String four){
 		this.one = one;
 		this.two= two;
 		this.three = three;
+		this.four = four;
 	}
 	public void setOne(String one) {
 		this.one = one;
@@ -36,6 +39,13 @@ public class result {
 
 	public String getThree() {
 		return three;
+	}
+	public void setFour(String four) {
+		this.four = four;
+	}
+
+	public String getFour() {
+		return four;
 	}
 
 

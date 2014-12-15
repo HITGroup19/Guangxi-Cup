@@ -35,7 +35,7 @@ public class Dactor_m extends HttpServlet {
 		String url = "success2.jsp";
 		response.setContentType("text/html");
 		response.setCharacterEncoding("UTF-8");
-		String eight= new String(request.getParameter("eight").getBytes("ISO-8859-1"),"UTF-8");
+		String six= new String(request.getParameter("six").getBytes("ISO-8859-1"),"UTF-8");
 		String password= new String(request.getParameter("password").getBytes("ISO-8859-1"),"UTF-8");
 		ArrayList<number> numberinfo = Actionbase.showAllnumber();
 	  	if(numberinfo!=null&&numberinfo.size()>0){
@@ -43,20 +43,18 @@ public class Dactor_m extends HttpServlet {
 	  	   		number number1 =(number)numberinfo.get(i);
 	  	   		String Number = number1.getNumber();
 	  	   		String Password = number1.getPassword();
-	  	   		if(eight.equals(Number) == true&&password.equals(Password)==true)
+	  	   		if(six.equals(Number) == true&&password.equals(Password)==true)
 	  	   		{	
-	  	   			if(Actionbase.deleteInfo_m(eight)){
+	  	   			if(Actionbase.deleteInfo_m(six)){
 	  	   					System.out.print("--");
-	  	   					request.setAttribute("message","����Ϊ"+eight+"ͼ����Ϣɾ��ɹ���");	
+	  	   					request.setAttribute("message","����Ϊ"+six+"ͼ����Ϣɾ��ɹ���");	
 	  	   					break;
 	  	   				}
 	  	   				else{
 	  	   					request.setAttribute("message", "ɾ��ͼ����Ϣ���?");
 	  	   					System.out.print("++");
+	  		  	   			url = "error4.jsp";
 	  	   				}
-	  	   		}
-	  	   		else{
-	  	   			url = "error4.jsp";
 	  	   		}
 	  	   	}
 	  	}

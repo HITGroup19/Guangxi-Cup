@@ -7,7 +7,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <base href="<%=basePath%>">
 	<link href="file/css/test4.css" rel='stylesheet' type='text/css' />
 
@@ -29,14 +28,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <table width="840" border="0" align="center" >
    <tr>
      <th width="60" colspan="1" align="center" >参赛单位</th>
-     <th width="60" colspan="1" align="center" >队员姓名</th>
-     <th width="60" colspan="1" align="center" >号码</th>
-     <th width="60" colspan="1" align="center" >性别</th>
+     <th width="60" colspan="1" align="center" >球员姓名</th>
+     <th width="60" colspan="1" align="center" >球员号码</th>
+     <th width="60" colspan="1" align="center" >球员性别</th>
+     <th width="60" colspan="1" align="center" >联系方式</th>
+     <th width="60" colspan="1" align="center" >学/职工号</th>
      <th width="60" colspan="1" align="center" >身份</th>
      <th width="60" colspan="1" align="center" >学历</th>
-     <th width="60" colspan="1" align="center" >学/职工号</th>
-     <th width="60" colspan="1" align="center" >联系方式</th>
-     <th width="60" colspan="1" align="center" >备注</th>
+     <th width="60" colspan="1" align="center" >三好杯球员</th>
+     <th width="60" colspan="1" align="center" >年龄段</th>
    </tr>
     <tr></tr>
    <tr></tr>
@@ -47,7 +47,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     %>
     <tr align="center" bgcolor="#99bbff">
     	<td><%=baoming_m.getOne() %></td>
-      	<td><%=baoming_m.getTwo() %></td>  	
+      	<td><%=baoming_m.getTwo() %></td>
+      	<td><%=baoming_m.getThree() %></td>  	  	
        	<td><%=baoming_m.getFour() %></td>
        	<td><%=baoming_m.getFive() %></td>
       	<td><%=baoming_m.getSix() %></td>  	
@@ -59,7 +60,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <%} else{%>
      <tr align="center" bgcolor="#ffffff">
     	<td><%=baoming_m.getOne() %></td>
-      	<td><%=baoming_m.getTwo() %></td>  	
+      	<td><%=baoming_m.getTwo() %></td> 
+      	<td><%=baoming_m.getThree() %></td>   	
        	<td><%=baoming_m.getFour() %></td>
        	<td><%=baoming_m.getFive() %></td>
       	<td><%=baoming_m.getSix() %></td>  	

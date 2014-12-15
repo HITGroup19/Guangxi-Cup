@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div id="Banner">
       <form action="Dactor_m" method="post" name="form">
             <p><span >请输入您的学号或职工号：</span>
-  	<input type="text" style="height:27" name="eight" placeholder="请输入您的学号或职工号"/>
+  	<input type="text" style="height:27" name="six" placeholder="请输入您的学号或职工号"/>
   	        
   	        <p><span >请输入您的密码：</span>
   	<input type="text" style="height:27" name="password" placeholder="请输入您的密码"/>
